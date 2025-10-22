@@ -42,10 +42,19 @@
 		information from different tables. 
 
 ![](./web_docs/relational_database_tables.png)
-
+![](./web_docs/relational_database_tables2.png)
 -----
 
 ## Data Visualization
+
+		Data visualization is the graphical representation 
+		of data using visual elements like charts, graphs, 
+		and maps to help people see and understand trends, 
+		patterns, and outliers.  The primary purpose is to 
+		communicate   complex   information   clearly  and 
+		efficiently,  making  data   more  accessible  and 
+		enabling informed decision-making.
+
 
 ![](./web_docs/data_visualization_image.webp)
 
