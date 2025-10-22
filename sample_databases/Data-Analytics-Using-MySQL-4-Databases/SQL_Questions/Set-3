@@ -1,0 +1,60 @@
+-- 1. Generating a Sequence of Numbers: Generate a sequence of numbers from 1 to 10.
+WITH RECURSIVE  Numbers AS (
+-- Anchor Query
+	SELECT 1 As Num
+    UNION ALL
+-- Recursive Query
+	SELECT Num + 1 
+    FROM Numbers 
+    WHERE Num < 10
+)
+SELECT * FROM Numbers;
+
+-- 1. Generating a Sequence of Numbers: Generate a sequence of even numbers from 1 to 10.
+WITH RECURSIVE  Numbers AS (
+-- Anchor Query
+	SELECT 2 As Num
+    UNION ALL
+-- Recursive Query
+	SELECT Num + 2 
+    FROM Numbers 
+    WHERE Num < 10
+)
+SELECT * FROM Numbers;
+
+-- 1. Generating a Sequence of Numbers: Generate a sequence of odd numbers from 1 to 10.
+WITH RECURSIVE  Numbers AS (
+-- Anchor Query
+	SELECT 1 As Num
+    UNION ALL
+-- Recursive Query
+	SELECT Num + 2
+    FROM Numbers 
+    WHERE Num < 10
+)
+SELECT * FROM Numbers;
+
+-- 2. Generate a Series of Dates: Generate a list of dates between two given dates (e.g., 2024-12-15 to 2025-01-10).
+WITH RECURSIVE Date_Series AS (
+-- Anchor Query
+	SELECT '2024-12-15' AS Date_Value
+    UNION ALL
+-- Recursive Query
+	SELECT Date_Value + INTERVAL 1 DAY
+    FROM Date_Series
+    WHERE Date_Value < '2025-01-10'
+)
+SELECT Date_Value FROM Date_Series;    
+
+-- 3. Calculating Factorial: Compute the factorial of a number 5 using a recursive CTE.
+
+WITH RECURSIVE Factorial_CTE AS (
+-- Anchor Query
+	SELECT 1 AS N, 1 AS Factorial
+    UNION ALL
+-- Recursive Query
+	SELECT N + 1, Factorial * (N + 1)
+    FROM Factorial_CTE
+    WHERE N < 5
+)
+SELECT * FROM Factorial_CTE;

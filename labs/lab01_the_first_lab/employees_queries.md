@@ -1,0 +1,89 @@
+# MySQL Employees Schema and Queries
+
+## Schema
+```sql
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY,
+    first_name VARCHAR(30),
+    last_name VARCHAR(30),
+    department VARCHAR(20),
+    country VARCHAR(20),
+    date_of_birth DATE,
+    salary INT,
+    hire_date DATE,
+    degree VARCHAR(10)
+);
+
+```
+## Inserts
+```sql
+INSERT INTO employees VALUES
+(1, 'Hank', 'Martinez', 'Engineering', 'USA', '1979-05-25', 103180, '2015-03-21', 'MBA'),
+(2, 'Oscar', 'Smith', 'Business', 'CANADA', '1980-11-03', 172987, '2010-12-29', 'MS'),
+(3, 'Yara', 'Martinez', 'Marketing', 'MEXICO', '1981-11-02', 106876, '2012-05-13', 'PHD'),
+(4, 'Bob', 'Davis', 'IT', 'CANADA', '1982-10-04', 131365, '2017-06-10', 'BS'),
+(5, 'Eve', 'Miller', 'Marketing', 'USA', '2000-08-09', 159565, '2019-09-16', 'MS'),
+(6, 'Ivy', 'Johnson', 'Marketing', 'GERMANY', '1980-06-24', 157566, '2020-10-15', 'MBA'),
+(7, 'Rita', 'Brown', 'IT', 'INDIA', '1999-01-07', 132757, '2016-01-02', 'MBA'),
+(8, 'Sam', 'Johnson', 'IT', 'USA', '1978-02-01', 107513, '2020-02-14', 'PHD'),
+(9, 'Uma', 'Rodriguez', 'Marketing', 'INDIA', '1984-03-06', 154184, '2011-04-29', 'BS'),
+(10, 'Xander', 'Garcia', 'Engineering', 'INDIA', '1983-03-02', 131357, '2019-11-30', 'MS'),
+(11, 'Ivy', 'Anderson', 'IT', 'USA', '1989-11-02', 154700, '2023-03-18', 'MBA'),
+(12, 'Quinn', 'Wilson', 'Engineering', 'GERMANY', '1986-09-08', 165314, '2012-12-17', 'MBA'),
+(13, 'Sam', 'Wilson', 'IT', 'GERMANY', '1971-07-04', 170058, '2024-10-18', 'PHD'),
+(14, 'Xander', 'Hernandez', 'Marketing', 'MEXICO', '1980-01-09', 167768, '2022-01-09', 'MBA'),
+(15, 'Victor', 'Williams', 'Business', 'USA', '1992-07-24', 104031, '2016-07-20', 'MBA'),
+(16, 'Alice', 'Moore', 'Business', 'GERMANY', '1982-03-07', 112702, '2012-11-07', 'BS'),
+(17, 'Sam', 'Taylor', 'Marketing', 'GERMANY', '1992-11-11', 174367, '2015-12-19', 'PHD'),
+(18, 'Nina', 'Rodriguez', 'Engineering', 'GERMANY', '1986-12-14', 194691, '2015-08-19', 'PHD'),
+(19, 'Nina', 'Rodriguez', 'Marketing', 'CANADA', '1984-06-11', 180711, '2014-02-10', 'MS'),
+(20, 'Rita', 'Rodriguez', 'IT', 'INDIA', '1971-03-27', 127952, '2021-03-07', 'MS'),
+(21, 'Bob', 'Taylor', 'IT', 'USA', '1995-04-21', 143044, '2022-12-04', 'PHD'),
+(22, 'Wendy', 'Jackson', 'Marketing', 'CANADA', '1992-02-25', 141541, '2021-09-07', 'BS'),
+(23, 'Sam', 'Taylor', 'Business', 'GERMANY', '1996-08-03', 197230, '2011-06-04', 'MBA'),
+(24, 'David', 'Anderson', 'Engineering', 'INDIA', '1980-05-31', 127172, '2024-12-24', 'PHD'),
+(25, 'Liam', 'Davis', 'Business', 'GERMANY', '1979-01-11', 179500, '2013-08-24', 'MBA'),
+(26, 'Hank', 'Johnson', 'IT', 'GERMANY', '1973-03-04', 113987, '2016-12-08', 'MBA'),
+(27, 'Mona', 'Taylor', 'Business', 'INDIA', '1986-10-08', 136196, '2015-09-12', 'BS'),
+(28, 'Alice', 'Smith', 'Marketing', 'USA', '1983-10-02', 114226, '2013-04-20', 'MBA'),
+(29, 'Uma', 'Taylor', 'Marketing', 'CANADA', '1999-07-12', 127869, '2014-11-02', 'PHD'),
+(30, 'Zane', 'Martinez', 'Business', 'USA', '1990-07-17', 157019, '2015-01-07', 'BS'),
+(31, 'Alice', 'Jones', 'Engineering', 'CANADA', '1997-06-23', 151346, '2019-04-09', 'PHD'),
+(32, 'Ivy', 'Moore', 'Engineering', 'GERMANY', '1990-08-19', 131180, '2023-03-23', 'MBA'),
+(33, 'Frank', 'Miller', 'Business', 'GERMANY', '1982-06-27', 132648, '2015-02-19', 'PHD'),
+(34, 'Carol', 'Martin', 'Business', 'CANADA', '1992-05-03', 177725, '2010-11-10', 'BS'),
+(35, 'Uma', 'Thomas', 'IT', 'MEXICO', '1992-04-23', 138061, '2016-08-07', 'MBA'),
+(36, 'Nina', 'Anderson', 'Marketing', 'CANADA', '1984-05-19', 124761, '2023-07-22', 'MS'),
+(37, 'Mona', 'Anderson', 'Engineering', 'CANADA', '1975-11-08', 198702, '2014-09-30', 'MS'),
+(38, 'Bob', 'Brown', 'Engineering', 'USA', '1994-12-03', 160152, '2016-09-02', 'PHD'),
+(39, 'Paul', 'Garcia', 'Marketing', 'USA', '1987-01-03', 187915, '2016-11-27', 'MBA'),
+(40, 'Jack', 'Garcia', 'IT', 'MEXICO', '2000-05-25', 150473, '2012-04-29', 'PHD'),
+(41, 'Liam', 'Thomas', 'Business', 'CANADA', '1981-02-27', 197046, '2021-07-13', 'MS'),
+(42, 'Frank', 'Anderson', 'Business', 'INDIA', '1975-06-30', 166799, '2020-07-27', 'BS'),
+(43, 'Grace', 'Lopez', 'Business', 'USA', '1987-06-22', 114741, '2017-06-04', 'BS'),
+(44, 'Paul', 'Brown', 'Engineering', 'INDIA', '1974-02-25', 147897, '2024-01-18', 'BS'),
+(45, 'Alice', 'Anderson', 'Engineering', 'USA', '2000-02-04', 169994, '2012-10-18', 'MS'),
+(46, 'Rita', 'Jones', 'Engineering', 'GERMANY', '1971-04-23', 172070, '2015-01-24', 'PHD'),
+(47, 'Quinn', 'Jackson', 'IT', 'GERMANY', '1992-02-19', 150130, '2014-04-17', 'MS'),
+(48, 'Grace', 'Martinez', 'Business', 'CANADA', '1973-04-20', 107006, '2014-10-18', 'MS'),
+(49, 'Xander', 'Martinez', 'IT', 'CANADA', '1994-04-09', 104297, '2020-08-29', 'MBA'),
+(50, 'Mona', 'Anderson', 'Business', 'INDIA', '1986-08-05', 126281, '2023-02-06', 'BS');
+```
+## 20 Basic Queries
+1. Show all employees
+```sql
+SELECT * FROM employees;
+```
+...
+## 20 Basic-to-Intermediate Queries
+1. Count employees in each department
+```sql
+SELECT department, COUNT(*) FROM employees GROUP BY department;
+```
+...
+## 20 Intermediate Queries
+1. Find employees earning more than the department average
+```sql
+SELECT * FROM employees e WHERE salary > (SELECT AVG(salary) FROM employees WHERE department=e.department);
+```
+...

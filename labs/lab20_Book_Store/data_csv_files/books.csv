@@ -1,0 +1,206 @@
+book_id,ISBN,title,author,category,published_date
+1,978-1-001-38043,A Empire of Glass,Kenji Costa,Children,2011-09-08
+2,978-1-002-37110,Across Labyrinth,Helena Suzuki,Technology,1982-10-17
+3,978-1-003-85456,Garden Lost,Noah Blake,Mystery,2014-05-05
+4,978-1-004-64921,Mirrors Rising,Marco Khan,Fantasy,2018-04-13
+5,978-1-005-67125,Whispers of Valley of Stone,Tariq Rahman,History,1992-03-29
+6,978-1-006-31632,Horizon Unbound,Helena Singh,Children,1998-02-19
+7,978-1-007-83975,Empire Lost,Hiroshi Blake,Mystery,2006-07-20
+8,978-1-008-16590,The Algorithms of Rivers,Priya Lombardi,Mystery,1988-02-25
+9,978-1-009-59692,Garden Awakening,Anya Vogel,Science,2014-02-22
+10,978-1-010-80702,Labyrinth Awakening,Akira Sato,Technology,2013-08-07
+11,978-1-011-15276,Inside Tomorrow,Lucia Sato,Fantasy,2009-03-27
+12,978-1-012-26544,Beyond Winter,Akira Blake,Philosophy,1990-09-13
+13,978-1-013-58351,Vienna Lost,Anya Vogel,Children,2014-05-26
+14,978-1-014-31465,Dreams of Atlas,Elise Dubois,Fiction,2016-10-01
+15,978-1-015-59192,Vienna Lost,Ava Yamada,Science,2010-05-20
+16,978-1-016-23356,Winter Rising,Mina Dubois,Mystery,1990-11-22
+17,978-1-017-15383,Songs of Light of Rivers,Ethan Weiss,Fiction,2005-05-21
+18,978-1-018-54725,Valley Unbound,Mateo Silva,Fiction,2009-01-17
+19,978-1-019-57472,Tales of Labyrinth,Akira Fischer,Fiction,2023-02-05
+20,978-1-020-95256,Tales of Storms of Fire,Nora Rossi,Fiction,2003-05-28
+21,978-1-021-87656,Atlas Lost,Jonas Fischer,Technology,2017-01-14
+22,978-1-022-69087,Ashes Falling,Akira Yamada,Fiction,2019-07-19
+23,978-1-023-13761,Songs of Storms,Mina Zhang,Children,1995-02-02
+24,978-1-024-54608,Ashes Falling,Arjun Novak,Science,1991-08-03
+25,978-1-025-21221,Atlas Awakening,Hiroshi Blake,History,1988-07-27
+26,978-1-026-72402,Whispers of Labyrinth,Arjun Suzuki,Fantasy,2010-12-23
+27,978-1-027-63005,Whispers of Mirrors of Stars,Greta Blake,Fiction,1989-12-09
+28,978-1-028-55056,Beyond Light of Rivers,Mina Silva,Technology,2003-10-25
+29,978-1-029-42951,Valley Awakening,Marco Dubois,Technology,1993-10-02
+30,978-1-030-34267,A Winter,Helena Ishikawa,Fantasy,2022-08-27
+31,978-1-031-78765,Beyond Mirrors,Yara Moreau,Philosophy,2014-02-06
+32,978-1-032-11854,Under Vienna of Secrets,Omar Rahman,Science,1993-07-23
+33,978-1-033-26551,Shadows of Empire of Code,Mason Holloway,History,2011-04-14
+34,978-1-034-72746,Tales of Mirrors of Rain,Farah Blake,Philosophy,2001-01-20
+35,978-1-035-24953,Ashes Falling,Mason Haddad,Self-Help,2001-06-06
+36,978-1-036-29887,Across Mirrors,Ivy Chen,Philosophy,1982-05-28
+37,978-1-037-83147,Songs of Harbor,Omar Sato,Self-Help,1985-04-24
+38,978-1-038-59856,Atlas Lost,Greta Zhang,Non-Fiction,2003-06-10
+39,978-1-039-84531,Storms Awakening,Farah Chen,Self-Help,1993-09-12
+40,978-1-040-44687,The Atlas of Fire,Caleb Bauer,Non-Fiction,1989-06-19
+41,978-1-041-63545,A Courage of Secrets,Ravi Suzuki,Fiction,1980-02-13
+42,978-1-042-47056,Atlas Unbound,Omar Holloway,Non-Fiction,2011-09-17
+43,978-1-043-91927,Tales of Storms of Rain,Mateo Rahman,Self-Help,2015-05-04
+44,978-1-044-44816,Paths to Winter of Dust,Caleb Suzuki,Non-Fiction,1986-09-07
+45,978-1-045-84607,A Silence,Ravi Weiss,Science,2013-08-05
+46,978-1-046-45683,Storms Rising,Zoe Dubois,Science,1998-01-20
+47,978-1-047-52247,Shadows of Mirrors of Stars,Ivy Zhang,Fiction,1999-05-19
+48,978-1-048-86955,Under Horizon of Rain,Kenji Singh,Mystery,2005-10-20
+49,978-1-049-71669,Songs of Memory,Mina Holloway,Fantasy,1987-11-10
+50,978-1-050-74451,Paths to Storms of Code,Ravi Chen,Technology,2016-07-10
+51,978-1-051-31079,Echoes of Orbit,Priya Fernandez,Science,1984-09-09
+52,978-1-052-82102,Labyrinth Unbound,Omar Singh,Self-Help,2016-06-29
+53,978-1-053-62976,Echoes of Algorithms,Helena Haddad,Science,2023-07-09
+54,978-1-054-34586,Tales of Horizon of Rivers,Farah Suzuki,Technology,1982-06-07
+55,978-1-055-45003,Inside Atlas of Stars,Lucia Vogel,Fantasy,1989-02-17
+56,978-1-056-92578,An Light of Stars,Tariq Dubois,History,1981-04-17
+57,978-1-057-63476,Songs of Tomorrow of Fire,Ravi Khan,History,2004-10-09
+58,978-1-058-75323,Beyond Vienna,Zoe Ishikawa,Children,1986-11-27
+59,978-1-059-71894,Under Skylines of Fire,Yara Rossi,Mystery,2023-12-21
+60,978-1-060-76616,Echoes of Valley,Nora Costa,Non-Fiction,2006-11-20
+61,978-1-061-76550,An Algorithms of Code,Jonas Weiss,Mystery,1995-03-31
+62,978-1-062-96499,Horizon Awakening,Elise Khan,Mystery,2006-01-05
+63,978-1-063-81228,Empire Unbound,Hiroshi Fischer,Science,2004-10-03
+64,978-1-064-84946,Storms Awakening,Farah Novak,Self-Help,1990-09-17
+65,978-1-065-59968,Tomorrow Unbound,Mason Fernandez,Fantasy,2011-08-20
+66,978-1-066-53515,Empire Unbound,Mason Lombardi,History,2006-06-22
+67,978-1-067-28894,Tales of Storms,Caleb Mori,Mystery,1980-09-08
+68,978-1-068-91691,Empire Rising,Arjun Weiss,Self-Help,1995-03-09
+69,978-1-069-51505,Across Algorithms of Time,Farah Singh,Mystery,1997-01-17
+70,978-1-070-99705,Whispers of Mirrors of Paper,Mason Zhang,Fiction,2008-04-23
+71,978-1-071-23173,Tomorrow Rising,Priya Ishikawa,Fantasy,2011-07-29
+72,978-1-072-17355,Courage Awakening,Tariq Blake,Fiction,2015-09-18
+73,978-1-073-84177,Orbit Awakening,Priya Lombardi,Non-Fiction,1998-06-26
+74,978-1-074-91226,Songs of Courage of Glass,Ravi Sato,Philosophy,1997-02-27
+75,978-1-075-70236,Beyond Mirrors of Stone,Nora Rahman,Technology,1991-05-24
+76,978-1-076-19681,Horizon Unbound,Tariq Khan,Children,1987-02-01
+77,978-1-077-42780,Orbit Lost,Omar Patel,Self-Help,2010-12-19
+78,978-1-078-59986,Light Falling,Santiago Petrov,History,1990-08-22
+79,978-1-079-96275,Inside Harbor of Code,Noah Khan,Fiction,2017-03-26
+80,978-1-080-16428,Memory Rising,Mina Petrov,Children,2013-05-27
+81,978-1-081-56179,Whispers of Mirrors of Code,Jonas Weiss,Non-Fiction,2015-12-21
+82,978-1-082-96400,Paths to Winter,Ethan Haddad,Children,2012-05-03
+83,978-1-083-50492,Tales of Empire of Rivers,Caleb Kuznetsov,Philosophy,1981-10-07
+84,978-1-084-48680,Silence Lost,Marco Moreau,Fiction,2020-10-20
+85,978-1-085-57953,Labyrinth Falling,Anya Lombardi,Fantasy,2019-04-25
+86,978-1-086-48684,Shadows of Memory of Glass,Yara Yamada,Mystery,2001-08-12
+87,978-1-087-39571,Tales of Ashes of Rain,Zoe Sato,Fiction,2023-05-10
+88,978-1-088-44663,Whispers of Garden of Paper,Marco Sato,Fantasy,1980-08-16
+89,978-1-089-59941,A Storms of Time,Mateo Moreau,Children,2006-03-22
+90,978-1-090-83584,Inside Vienna of Rivers,Kenji Fischer,Fiction,2019-08-31
+91,978-1-091-49608,Atlas Falling,Lucia Sato,Philosophy,2000-10-28
+92,978-1-092-25220,Across Vienna of Glass,Mason Holloway,Science,2002-02-05
+93,978-1-093-80804,Beyond Valley,Nora Costa,Technology,2010-01-28
+94,978-1-094-74139,Harbor Falling,Tariq Rossi,Children,2017-05-25
+95,978-1-095-40947,Across Memory of Dawn,Noah Silva,Non-Fiction,1999-12-12
+96,978-1-096-17936,Vienna Awakening,Hiroshi Kuznetsov,Self-Help,1996-02-02
+97,978-1-097-96870,Memory Falling,Caleb Petrov,Mystery,1984-02-10
+98,978-1-098-26505,Paths to Atlas,Ava Holloway,Fantasy,1990-12-04
+99,978-1-099-40539,Beyond Algorithms of Paper,Anya Chen,Non-Fiction,2019-01-05
+100,978-1-100-27038,Empire Lost,Ava Haddad,Mystery,1986-06-28
+101,978-1-101-56955,Under Courage of Rain,Mateo Petrov,Fiction,1980-08-31
+102,978-1-102-65176,Dreams of Ashes,Ava Kowalski,Non-Fiction,1985-09-07
+103,978-1-103-24293,A Algorithms of Stars,Zoe Bauer,Science,2006-08-18
+104,978-1-104-96363,Skylines Falling,Ethan Holloway,Fantasy,2020-10-05
+105,978-1-105-62640,Under Storms of Rivers,Ava Holloway,Self-Help,2018-01-03
+106,978-1-106-20589,Vienna Unbound,Noah Yamada,Technology,2020-05-03
+107,978-1-107-86724,Atlas Falling,Ivy Lombardi,Non-Fiction,2008-05-25
+108,978-1-108-89354,Whispers of Ashes of Dust,Ethan Mori,Non-Fiction,2002-09-04
+109,978-1-109-82264,Vienna Rising,Farah Patel,Children,2014-06-29
+110,978-1-110-69441,Tales of Winter of Dust,Zoe Kuznetsov,Non-Fiction,1995-03-16
+111,978-1-111-59060,Labyrinth Rising,Helena Rossi,Science,1991-06-08
+112,978-1-112-66606,Paths to Mirrors,Ivy Sato,Mystery,1984-03-07
+113,978-1-113-83608,Whispers of Orbit,Greta Lombardi,History,2006-04-22
+114,978-1-114-65435,Inside Vienna of Dust,Marco Petrov,Children,2013-08-27
+115,978-1-115-37884,The Light of Stone,Omar Silva,Fiction,2002-10-05
+116,978-1-116-82910,Paths to Mirrors,Kenji Petrov,Fiction,2017-12-02
+117,978-1-117-83526,Vienna Awakening,Mina Rahman,Fantasy,2017-11-29
+118,978-1-118-45054,Dreams of Valley of Dawn,Ethan Yamada,Children,2011-02-08
+119,978-1-119-56009,An Memory,Noah Bauer,Science,1995-03-30
+120,978-1-120-92991,An Empire,Mina Singh,Technology,1986-05-13
+121,978-1-121-30631,A Skylines,Anya Costa,Technology,1995-04-17
+122,978-1-122-16895,Light Awakening,Jonas Chen,Philosophy,2019-08-16
+123,978-1-123-96761,An Atlas,Mason Singh,Fiction,1999-11-16
+124,978-1-124-77154,Mirrors Lost,Zoe Rossi,Non-Fiction,2013-11-11
+125,978-1-125-73783,Inside Labyrinth,Caleb Khan,Children,2006-08-09
+126,978-1-126-11007,Paths to Light of Dawn,Kenji Costa,Self-Help,1982-06-16
+127,978-1-127-53007,Under Winter,Jonas Lombardi,Fantasy,1992-12-25
+128,978-1-128-79806,The Mirrors,Elise Rossi,Fiction,1997-01-20
+129,978-1-129-62044,Beyond Skylines of Paper,Akira Singh,Fantasy,1983-03-26
+130,978-1-130-85465,The Labyrinth of Dawn,Zoe Yamada,Fiction,1994-01-16
+131,978-1-131-63088,Harbor Unbound,Noah Patel,Technology,1985-03-02
+132,978-1-132-57428,Inside Courage,Greta Zhang,Technology,2010-12-07
+133,978-1-133-20308,Across Vienna,Kenji Rossi,Philosophy,2003-07-03
+134,978-1-134-76910,Light Awakening,Kenji Fernandez,Fantasy,1983-06-05
+135,978-1-135-94599,A Skylines of Paper,Anya Kuznetsov,Fantasy,1995-10-01
+136,978-1-136-30036,Beyond Vienna,Nora Haddad,Non-Fiction,2007-01-08
+137,978-1-137-85952,A Courage of Rivers,Arjun Vogel,Fantasy,2014-01-31
+138,978-1-138-29786,Harbor Lost,Helena Petrov,Self-Help,1994-03-07
+139,978-1-139-87518,Algorithms Unbound,Zoe Patel,Science,1992-04-27
+140,978-1-140-17456,Inside Skylines,Ivy Khan,Technology,1981-09-08
+141,978-1-141-90610,Light Rising,Lucia Petrov,Self-Help,1984-01-19
+142,978-1-142-15376,Shadows of Garden of Stars,Mina Suzuki,Self-Help,2013-02-22
+143,978-1-143-18109,Harbor Falling,Helena Zhang,Technology,1986-10-07
+144,978-1-144-15130,Vienna Awakening,Noah Sato,History,1987-09-28
+145,978-1-145-57696,Whispers of Storms,Zoe Mori,History,1987-02-13
+146,978-1-146-16863,Light Unbound,Priya Bauer,Science,2006-10-26
+147,978-1-147-47243,Paths to Ashes of Rain,Helena Ishikawa,History,1997-05-04
+148,978-1-148-55851,Atlas Falling,Helena Sato,Philosophy,1986-05-06
+149,978-1-149-83259,Garden Falling,Ethan Dubois,Self-Help,1993-11-20
+150,978-1-150-99838,Ashes Falling,Mateo Dubois,Mystery,2013-02-20
+151,978-1-151-38074,A Labyrinth of Paper,Marco Blake,Science,1988-02-01
+152,978-1-152-23256,Mirrors Falling,Kenji Lombardi,Fiction,1993-04-08
+153,978-1-153-91006,Songs of Valley of Fire,Tariq Mori,Fiction,1995-02-08
+154,978-1-154-91885,Dreams of Garden,Nora Kowalski,Non-Fiction,2011-01-29
+155,978-1-155-41133,Whispers of Storms,Mason Rossi,Science,2012-04-11
+156,978-1-156-79993,Atlas Awakening,Jonas Moreau,Fantasy,1990-06-30
+157,978-1-157-84766,Under Mirrors,Tariq Ivanov,Non-Fiction,2010-06-05
+158,978-1-158-31241,Storms Awakening,Jonas Costa,History,1998-10-12
+159,978-1-159-72991,Songs of Atlas,Nora Petrov,Non-Fiction,2008-10-05
+160,978-1-160-47363,Valley Rising,Noah Petrov,History,1985-08-04
+161,978-1-161-67340,Songs of Courage,Yara Vogel,Mystery,1986-08-11
+162,978-1-162-16980,Beyond Storms,Tariq Silva,Self-Help,1998-08-11
+163,978-1-163-39430,Skylines Awakening,Kenji Costa,Self-Help,1996-10-25
+164,978-1-164-29142,Inside Vienna,Akira Dubois,Children,2015-07-01
+165,978-1-165-28191,The Light,Isla Ivanov,Technology,2017-04-12
+166,978-1-166-38266,Echoes of Storms of Stone,Ava Kuznetsov,Fiction,1991-06-25
+167,978-1-167-41147,Shadows of Atlas,Lena Rossi,Fiction,1992-12-03
+168,978-1-168-69914,Vienna Rising,Kenji Rossi,Philosophy,2007-12-09
+169,978-1-169-85372,A Mirrors,Ethan Suzuki,Fiction,2003-02-12
+170,978-1-170-41531,Whispers of Empire,Omar Rossi,Fiction,1995-10-29
+171,978-1-171-18870,Across Courage of Rivers,Mateo Sato,History,1996-03-05
+172,978-1-172-15706,Shadows of Skylines of Paper,Hiroshi Blake,Technology,2001-02-01
+173,978-1-173-55193,Across Orbit of Code,Elise Blake,Science,1983-01-11
+174,978-1-174-27486,Whispers of Vienna,Jonas Chen,Fantasy,1994-11-30
+175,978-1-175-99742,Inside Valley,Helena Ivanov,Children,2017-04-01
+176,978-1-176-69988,Mirrors Falling,Greta Lombardi,Fiction,2014-10-26
+177,978-1-177-51365,Under Winter,Mason Weiss,Non-Fiction,1981-11-17
+178,978-1-178-94790,Skylines Unbound,Akira Suzuki,Technology,1981-08-22
+179,978-1-179-53506,Under Orbit,Farah Bauer,Fiction,2009-05-31
+180,978-1-180-60678,Vienna Awakening,Priya Kuznetsov,Technology,1999-09-22
+181,978-1-181-78062,Courage Unbound,Noah Fischer,Science,2015-10-06
+182,978-1-182-33652,Algorithms Unbound,Ivy Rossi,Philosophy,2016-11-20
+183,978-1-183-68447,Under Ashes of Rain,Ivy Fernandez,Children,1993-09-30
+184,978-1-184-56210,Whispers of Labyrinth of Glass,Noah Vogel,Science,1981-11-24
+185,978-1-185-63242,Across Memory of Rivers,Greta Holloway,Fiction,2008-08-06
+186,978-1-186-67432,Skylines Falling,Ava Lombardi,Mystery,2010-06-01
+187,978-1-187-60181,An Algorithms,Kenji Bauer,Children,1996-03-30
+188,978-1-188-68188,The Atlas of Glass,Mateo Vogel,Self-Help,1996-09-08
+189,978-1-189-46528,Dreams of Empire,Lena Silva,Technology,2009-02-19
+190,978-1-190-83619,A Horizon,Elise Kowalski,History,1997-05-11
+191,978-1-191-47431,Under Memory,Noah Vogel,Non-Fiction,2007-06-12
+192,978-1-192-68341,Echoes of Winter of Rain,Nora Petrov,Fiction,1987-09-29
+193,978-1-193-81063,Songs of Ashes,Mateo Silva,Fantasy,2004-09-02
+194,978-1-194-32818,Light Falling,Noah Dubois,Self-Help,2008-08-09
+195,978-1-195-74752,Skylines Falling,Caleb Novak,Fantasy,1990-08-14
+196,978-1-196-27009,Inside Valley,Mina Silva,Technology,2004-09-29
+197,978-1-197-63843,A Algorithms of Code,Santiago Dubois,Fantasy,2003-07-31
+198,978-1-198-71057,Harbor Rising,Nora Fernandez,Children,2000-03-08
+199,978-1-199-87042,Shadows of Orbit of Glass,Tariq Ivanov,Fantasy,2008-09-12
+200,978-1-200-26274,Songs of Empire,Priya Mori,Mystery,1982-06-26
+201,978-1-201-55353,An Light of Glass,Ravi Fernandez,Self-Help,1990-02-11
+202,978-1-202-26406,Under Algorithms of Code,Anya Patel,Self-Help,1992-04-23
+203,978-1-203-86106,Under Atlas of Paper,Ivy Mori,Children,2006-07-19
+204,978-1-204-83874,An Atlas,Elise Kuznetsov,Philosophy,2017-10-17
+205,978-1-205-85598,Tales of Horizon,Ivy Holloway,Self-Help,2014-08-02

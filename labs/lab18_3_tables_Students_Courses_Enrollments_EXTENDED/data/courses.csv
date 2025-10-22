@@ -1,0 +1,34 @@
+course_id,course_code,course_name,credits,department
+1,AI263,Intro to Programming,3,AI
+2,AI252,Data Structures,2,AI
+3,AI418,Algorithms,2,AI
+4,ENG348,Database Systems,2,ENGINEERING
+5,CS189,Operating Systems,2,COMPUTER-SCIENCE
+6,LAW258,Computer Networks,2,LAW
+7,ENG335,Machine Learning,3,ENGINEERING
+8,AI316,Deep Learning,2,AI
+9,FIN268,Artificial Intelligence,4,FINANCE
+10,BUS296,NLP,4,BUSINESS
+11,ENG451,Computer Vision,3,ENGINEERING
+12,LAW206,Discrete Math,4,LAW
+13,ENG382,Linear Algebra,4,ENGINEERING
+14,CS444,Calculus I,4,COMPUTER-SCIENCE
+15,AI488,Calculus II,2,AI
+16,ENG137,Financial Accounting,2,ENGINEERING
+17,ENG162,Corporate Finance,2,ENGINEERING
+18,CS220,Business Analytics,2,COMPUTER-SCIENCE
+19,LAW215,Marketing Principles,3,LAW
+20,AI452,Microeconomics,3,AI
+21,ENG387,Macroeconomics,2,ENGINEERING
+22,ENG358,Thermodynamics,2,ENGINEERING
+23,ENG362,Circuit Analysis,4,ENGINEERING
+24,FIN288,Digital Signal Processing,2,FINANCE
+25,AI450,Materials Science,2,AI
+26,AI156,Constitutional Law,3,AI
+27,CS255,Contract Law,3,COMPUTER-SCIENCE
+28,ENG187,Intellectual Property Law,2,ENGINEERING
+29,BUS297,Project Management,3,BUSINESS
+30,ENG425,Entrepreneurship,2,ENGINEERING
+31,ENG364,Robotics,4,ENGINEERING
+32,BUS112,Ethics in AI,3,BUSINESS
+33,FIN455,Cloud Computing,4,FINANCE

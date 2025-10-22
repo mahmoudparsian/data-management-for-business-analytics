@@ -1,0 +1,117 @@
+## Employee Database Script
+
+This repository contains the MySQL script to create an `Employee` database, define its schema, populate it with sample data, and execute several queries for analysis. The queries focus on identifying the top 3 highest-paid employees in each department, calculating the average salary of employees hired in the last 5 years, and finding employees earning less than this average.
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+Ensure you have:
+- MySQL installed on your system.
+
+### How to Use
+
+1. Copy the entire script provided below.
+2. Paste it into your MySQL client or execute it using the MySQL command line.
+3. The script will:
+   - Create the `Employee` database.
+   - Define `departments` and `employees` tables.
+   - Insert sample data into the tables.
+   - Run the specified queries.
+
+---
+
+## MySQL Script
+
+```sql
+-- Step 1: Create the Employee Database
+CREATE DATABASE Employee;
+
+-- Step 2: Switch to the Employee Database
+USE Employee;
+
+-- Step 3: Create the Departments Table
+CREATE TABLE departments (
+    departmentid INT PRIMARY KEY,
+    departmentname VARCHAR(100)
+);
+
+-- Step 4: Create the Employees Table
+CREATE TABLE employees (
+    employeeid INT PRIMARY KEY,
+    firstname VARCHAR(50),
+    lastname VARCHAR(50),
+    departmentid INT,
+    salary DECIMAL(10,2),
+    datehired DATE,
+    FOREIGN KEY (departmentid) REFERENCES departments(departmentid)
+);
+
+-- Step 5: Insert Sample Data into Departments
+INSERT INTO departments (departmentid, departmentname) VALUES
+(1, 'HR'),
+(2, 'ENGINEERING'),
+(3, 'SALES');
+
+-- Step 6: Insert Sample Data into Employees
+INSERT INTO employees (employeeid, firstname, lastname, departmentid, salary, datehired) VALUES
+(1, 'Alice', 'Smith', 1, 50000, '2020-01-15'),
+(2, 'Bob', 'Johnson', 1, 60000, '2018-03-22'),
+(3, 'Charlie', 'Williams', 2, 70000, '2019-07-30'),
+(4, 'David', 'Brown', 2, 80000, '2017-11-11'),
+(5, 'Eve', 'Davis', 3, 90000, '2021-02-25'),
+(6, 'Frank', 'Miller', 3, 55000, '2020-09-10'),
+(7, 'Grace', 'Wilson', 2, 75000, '2016-04-05'),
+(8, 'Henry', 'Moore', 1, 65000, '2022-06-17');
+
+-- Step 7: View Data in Both Tables
+SELECT * FROM employees;
+SELECT * FROM departments;
+
+-- Part 1: Find the Top 3 Highest-Paid Employees in Each Department
+SELECT 
+    e.employeeid, 
+    e.firstname, 
+    e.lastname, 
+    e.departmentid, 
+    e.salary, 
+    e.datehired, 
+    d.departmentname
+FROM 
+    employees e
+JOIN 
+    departments d ON e.departmentid = d.departmentid
+WHERE 
+    e.salary IN (
+        SELECT DISTINCT salary 
+        FROM employees e2 
+        WHERE e2.departmentid = e.departmentid 
+        ORDER BY salary DESC LIMIT 3
+    )
+ORDER BY 
+    e.departmentid, e.salary DESC;
+
+-- Part 2: Find the Average Salary of Employees Hired in the Last 5 Years
+SELECT 
+    ROUND(AVG(salary), 2) AS average_salary_last_5_years 
+FROM 
+    employees 
+WHERE 
+    datehired >= (CURRENT_DATE - INTERVAL 5 YEAR);
+
+-- Part 3: Find Employees Whose Salary is Less Than the Average Salary of Employees Hired in the Last 5 Years
+SELECT 
+    * 
+FROM 
+    employees 
+WHERE 
+    salary < (
+        SELECT 
+            ROUND(AVG(salary), 2) 
+        FROM 
+            employees 
+        WHERE 
+            datehired >= (CURRENT_DATE - INTERVAL 5 YEAR)
+    );

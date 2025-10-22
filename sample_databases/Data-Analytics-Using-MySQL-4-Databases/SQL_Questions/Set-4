@@ -1,0 +1,65 @@
+CREATE TABLE Authors (
+	AuthorID INT PRIMARY KEY,
+    AuthorName VARCHAR(100));
+    
+INSERT INTO Authors (AuthorID, AuthorName) VALUES
+(1, 'Author A'),
+(2, 'Author B'),
+(3, 'Author C'),
+(4, 'Author D'),
+(5, 'Author E');
+
+SELECT * FROM Authors;
+
+CREATE TABLE Books (
+	BookID INT PRIMARY KEY,
+    AuthorID INT,
+    BookTitle VARCHAR(100),
+    PublicationYear DATE,
+    FOREIGN KEY (AuthorID) REFERENCES Authors(AuthorID));
+    
+INSERT INTO Books (BookID, AuthorID, BookTitle, PublicationYear) VALUES
+(1, 1, 'Book 1 by Author A', '2023-01-15'),
+(2, 1, 'Book 2 by Author A', '2023-07-20'),
+(3, 2, 'Book 1 by Author B', '2022-03-10'),
+(4, 2, 'Book 2 by Author B', '2023-05-05'),
+(5, 3, 'Book 1 by Author C', '2023-06-25'),
+(6, 3, 'Book 2 by Author C', '2021-08-15'),
+(7, 4, 'Book 1 by Author D', '2022-09-30'),
+(8, 4, 'Book 2 by Author D', '2023-12-05'),
+(9, 5, 'Book 1 by Author E', '2023-04-17'),
+(10, 5, 'Book 2 by Author E', '2020-11-01');
+
+-- 1. List all authors and number of books written
+SELECT * FROM Authors;
+SELECT * FROM Books;
+
+SELECT A.AuthorID, A.AuthorName, COUNT(B.Authorid) AS Books_Written
+FROM Authors A JOIN Books B ON A.AuthorID = B.AuthorID
+GROUP BY A.AuthorID;
+
+-- OR
+ 
+SELECT A.AuthorName, COUNT(B.BookID) AS Books_Written
+FROM Authors A JOIN Books B ON A.AuthorID = B.AuthorID
+GROUP BY A.AuthorName;
+
+-- 2. Find books published in the last year and corresponding authors
+
+SELECT A.AuthorName, A.AuthorID, B.BookID, B.BookTitle, B.PublicationYear
+FROM Authors A JOIN Books B ON A.AuthorID = B.AuthorID
+WHERE EXTRACT(YEAR FROM B.PublicationYear) = EXTRACT(YEAR FROM CURRENT_DATE) - 2;
+
+-- OR
+
+SELECT A.AuthorName, B.BookTitle
+FROM Books B 
+JOIN Authors A ON B.AuthorID = A.AuthorID
+WHERE EXTRACT(YEAR FROM B.PublicationYear) = YEAR(CURDATE()) - 2;
+
+-- OR
+
+SELECT A.AuthorName, B.BookTitle, B.PublicationYear
+FROM Books B 
+JOIN Authors A ON B.AuthorID = A.AuthorID
+WHERE B.PublicationYear LIKE '2023%'; -- Replace with actual year as per data

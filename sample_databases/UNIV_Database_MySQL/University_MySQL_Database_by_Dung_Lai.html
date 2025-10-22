@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      University MySQL Database &middot; Dung Lai
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  <!-- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110006044-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-110006044-1');
+  </script> 
+
+  <!-- toogle button -->
+  <script>
+  function myFunction() {
+      var x = document.getElementById("myDIV");
+      if (x.style.display === "none") {
+          x.style.display = "block";
+      } else {
+          x.style.display = "none";
+      }
+  }
+  </script>
+  
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>A personal website of <a href="https://dunglai.github.io/about" target="">Dung Lai</a>, containing technical blog on technology.</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+    
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about/">About</a>
+        
+      
+    
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+    
+    <span class="sidebar-nav-item">Currently v1.0.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2022. All rights reserved.
+    </p>
+  </div>
+</div>
+
+ 
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Dung Lai</a>
+            <small>blog</small>             
+          </h3>
+        </div>
+      </div>
+      
+      <link rel="stylesheet" href="/public/css/blog-index.css">
+
+<nav>
+	<div class='blog-wrapper'>
+		<div class='blog-index'>
+			<strong><u>Machine learning</u></strong></br>
+				<li><a href='https://dunglai.github.io/2018/01/25/SVD/'>7. Singular Value Decomposition</a></li>
+				<li><a href='https://dunglai.github.io/2017/12/21/gradient-descent/'>6. Gradient Descent</a></li>
+				<li><a href='https://dunglai.github.io/2017/12/09/k-nearest-neighbors/'>5. K Nearest Neighbors</a></li>
+				<li><a href='https://dunglai.github.io/2017/10/10/linear-regression/'>4. Linear Regression</a></li>
+				<li><a href='https://dunglai.github.io/2017/09/21/FlappyBirdAI/'>3. AI for flappy bird game (Neural Network, Genetic Algorithm)</a></li>
+				<li><a href='https://dunglai.github.io/2017/06/10/image-compression/'>2. Image Segmentation using K-Means</a></li>
+				<li><a href='https://dunglai.github.io/2017/06/01/k-means/'>1. K-Means Clustering</a></li>
+			<strong><u>Data Structure and Algorithm</u></strong></br>
+				<li><a href='https://dunglai.github.io/2018/07/26/linked-list/'>1. Linked List</a></li>
+				<li><a href='https://dunglai.github.io/2018/07/26/linked-list/#StackQueue'>2. Stack, Queue</a>	
+			<strong><u>Other</u></strong></br>
+				<li><a href='https://dunglai.github.io/2018/07/10/cars-visualisation/'>5. Interactive Visualisation</a></li>
+				<li><a href='https://dunglai.github.io/2017/06/30/mongodbmapping/'>4. Mapping MySQL to MongoDB</a></li>
+				<li><a href='https://dunglai.github.io/2017/06/27/UniversityMySQL/'>3. University MySQL DB</a></li>
+				<li><a href='https://dunglai.github.io/2017/05/27/Planetary-Rover/'>2. Planetary Rover Game (C#, Winform)</a></li>
+				<li><a href='https://dunglai.github.io/2017/03/01/Music-Player/'>1. Music Player (Pascal)</a></li>
+			<strong><u>Project</u></strong></br>
+				<li><a href='https://dunglai.github.io/2018/04/09/NavigationTrainer/'>1. Journey Preparation Tool</a></li>
+		</div>
+	</div>
+</nav>
+
+      <div class="container content">
+        <div class="post">
+  <h1 style="font-size: 130%;" class="post-title">University MySQL Database</h1>
+  <span class="post-date" style="float:none;">27 Jun 2017</span>
+  
+  <div class="tag">MySQL</div>
+<p><strong>Content:</strong>
+<!-- MarkdownTOC depth=4 --></p>
+
+<ul>
+  <li><a href="#1-requirement-overview">1. Requirement Overview</a></li>
+  <li><a href="#2-data-storage-solution">2. Data Storage Solution</a></li>
+  <li><a href="#3-illustration-of-the-design">3. Illustration of the design</a></li>
+  <li><a href="#4-scripts-for-data-storage">4. Scripts for data storage</a></li>
+  <li><a href="#5-main-usage-and-scripts-for-typical-use-cases">5. Main usage and Scripts for typical use cases</a></li>
+  <li><a href="#6-scripts-and-report">6. Scripts and Report</a></li>
+</ul>
+
+<!-- /MarkdownTOC -->
+
+<p><a name="design-report-for-university-database"></a>
+<strong>DESIGN REPORT FOR UNIVERSITY DATABASE</strong>
+<a name="1-requirement-overview"></a></p>
+<h2 id="1-requirement-overview">1. Requirement Overview</h2>
+<p>The government of Vietnam planned to build a new university in a small town, they hired a team of 3 IT engineers to build a completely new data storage to keep track of information, especially about students and their score so that a wide range of scholarship from different providers will be given to students with hardship but still can maintain decent academic records.
+As being a small-scale university, the client wants to have data storage solution which strongly focus on different information of students. Here are the necessary requirement from the client:</p>
+<ul>
+  <li>Storage solution that have strong focus on different relation between objects and roles.</li>
+  <li>Keep track of students grade for different subjects, their number of attempt.</li>
+  <li>Information about the class that they have enrolled.</li>
+  <li>The class mentioned in previos requirement include staff’s information including tutors and conveners.</li>
+  <li>Conveners must a faculty member of the university, one faculty can have more than one convener and one convener can work for more than one faculty.</li>
+  <li>Tutors and Conveners as considered as employee of the university, they have rank which determines the pay rate each month.</li>
+  <li>This new university will have a limited number of room so it’s compulsory to keep track of the room for each class, multiple rooms for different teaching sessions is allowed.</li>
+  <li>Room number will be the same as room indentification number, they must be a 3 character string.</li>
+  <li>Keep track of scholarship for each student and the provider of each scholarship as well as a field to keep the amount, requirement of scholarship.
+The project is currently looking to more funding, they want to hire as low as IT engineers as possible. Therefore, they want a clear design report which demonstrate the design of the data storage solution, the scripts need to be clear, easy to read, and well-documented. They also want to have a very wide range of example main usage so that other developer can develope the functionality upon the examples.</li>
+</ul>
+
+<p><a name="2-data-storage-solution"></a></p>
+<h2 id="2-data-storage-solution">2. Data Storage Solution</h2>
+<p>In this project, I decide to use a relational database MySQL to tackle the requirements from client. This relational database is widely used, easy to use, extremely powerful, secure and scalable. 
+Strong entity of database:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Table   name</th>
+      <th>Explanation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Student</td>
+      <td>Storing   student personal information, their scholarship and faculty</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Faculty</td>
+      <td>Name   and ID of faculty where convener and student belongs, this section will be   extended on request</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Subject</td>
+      <td>The   subject name and ID, they also record the prerequisite of a subject so that   we can check if a student can enroll or not, it also can store requirement   information and credit worth.</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Class</td>
+      <td>Class   ID and convener ID who is responsible for the class, one subject can have   multiple class.</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Result</td>
+      <td>This   table store results of students, the score for the unit they have taken as   well as the number of attempt they took.</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Room</td>
+      <td>Room   details, including number, location, condition, size and whether it’s   reserved or not. Room has relation with class. Class must be allocated to   different room because of the small number of room in the new university</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Convener</td>
+      <td>Convener   details, they are the one who is mainly responsible for the classes that are   assigned. They also have rank which determine their pay rate</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Tutor</td>
+      <td>Tutors   are the one who help convener convey the information in the lecture as well   as running the lab. They also have rank which determine their pay rate</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Salary</td>
+      <td>Store   pay rate of rank, it is separated table, not merged into each staff because   changing pay rate for a rank can applied for every staffs, we don’t have to   change individual staff pay rate if pay rate are applied to staff   individually</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Scholarship</td>
+      <td>Grants   and Scholarship of students, they have ID and Value as well as condition to   maintain the funding.</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Provider</td>
+      <td>This   table stores provider which rasing fund and scholarship for student. One   provider can have multiple scholarship for student</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Dealing with many to many relationship:
+For many to many relationship, there is a weak entity between them so that a many to many relationship becomes 2 one to many relationship. For example, in this project, Tutor_Class, Scholarship_Provider and Faculty_convener are weak entity, they are junction table. One tutor can teach more than one class and one class can have more than one tutor.</p>
+<div class="imgcap">
+	<img style="display: inline-block; width: 55%;" src="/public/post-assets/UniversityMySQL/manytomany.png" width="500" align="center" />
+	<div class="thecap">Tackle with many to many relationship by weak entity</div>
+</div>
+
+<p>Data type:</p>
+<ul>
+  <li>Every ‘ID’ will be a 3-character string except ‘Faculty ID’. ‘Faculty ID’ is a 2-character string.</li>
+  <li>‘Genders’ are stored as ‘male’ or ‘female’.</li>
+  <li>Date of birth or dob is stored as DATE type. They have the following format: YYYY/MM/DD. A correct format for date is required.</li>
+  <li>‘Credit’ in ‘Subject’ table will be a decimal number which display exaclty 3 digits, one after the comma.</li>
+  <li>Score is stored as an integer ranging from 0 to 100, scholarship value is integer type.</li>
+  <li>Other field will accept any string which have less than 30 characters.</li>
+</ul>
+
+<p><a name="3-illustration-of-the-design"></a></p>
+<h2 id="3-illustration-of-the-design">3. Illustration of the design</h2>
+<div class="imgcap">
+	<img style="display: inline-block; width: 100%;" src="/public/post-assets/UniversityMySQL/UML.png" width="500" align="center" />
+	<div class="thecap">UML diagram</div>
+</div>
+
+<p><a name="4-scripts-for-data-storage"></a></p>
+<h2 id="4-scripts-for-data-storage">4. Scripts for data storage</h2>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*=====================Falculty table===================*/</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Faculty</span>
+<span class="p">(</span>
+	<span class="n">faculty_id</span> <span class="nb">char</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+	<span class="n">faculty_name</span> <span class="n">nvarchar</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span>
+<span class="p">);</span>
+<span class="cm">/*=====================Student table===================*/</span>
+<span class="k">DROP</span> <span class="k">TABLE</span> <span class="n">Student</span><span class="p">;</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Student</span>
+<span class="p">(</span>
+<span class="n">student_id</span> <span class="nb">char</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+<span class="n">firstname</span> <span class="n">nvarchar</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="p">,</span>
+<span class="n">lastname</span> <span class="n">nvarchar</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="p">,</span>
+<span class="n">gender</span> <span class="nb">enum</span><span class="p">(</span><span class="s1">'male'</span><span class="p">,</span> <span class="s1">'female'</span> <span class="p">,</span> <span class="s1">'homo'</span><span class="p">),</span>
+<span class="n">date_of_birth</span> <span class="nb">date</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="p">,</span>
+<span class="n">country_of_bird</span> <span class="n">nvarchar</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+<span class="n">faculty_id</span> <span class="nb">char</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+<span class="n">scholarship_id</span> <span class="nb">char</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="p">);</span>
+<span class="cm">/*=====================Subject table===================*/</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Subject</span>
+<span class="p">(</span>
+<span class="n">subject_id</span> <span class="nb">char</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+<span class="n">subject_name</span> <span class="n">nvarchar</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="p">,</span>
+<span class="n">prerequisite</span> <span class="n">nvarchar</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
+<span class="n">requirement</span> <span class="n">nvarchar</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
+<span class="n">credit</span> <span class="nb">decimal</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="cm">/* 3 digits in total, 1 digit after the comma */</span>
+<span class="p">);</span>
+<span class="cm">/*===================== Result table===================*/</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">Result</span>
+<span class="p">(</span>
+<span class="n">student_id</span> <span class="nb">char</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+<span class="n">subject_id</span> <span class="nb">char</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+<span class="n">attempt</span> <span class="nb">int</span> <span class="k">DEFAULT</span> <span class="mi">1</span><span class="p">,</span>
+<span class="n">score</span> <span class="nb">int</span><span class="p">,</span>
+<span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">student_id</span><span class="p">,</span> <span class="n">subject_id</span><span class="p">,</span> <span class="n">attempt</span><span class="p">)</span>
+<span class="p">);</span>
+<span class="cm">/*===================== Enrolment table===================*/</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Enrolment</span>
+<span class="p">(</span>
+<span class="n">enrolment_id</span> <span class="nb">char</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+<span class="n">student_id</span> <span class="nb">char</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+<span class="n">class_id</span> <span class="nb">char</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+<span class="n">title</span> <span class="n">nvarchar</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="p">);</span>
+<span class="cm">/*===================== Class table===================*/</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">Class</span>
+<span class="p">(</span>
+<span class="n">class_id</span> <span class="nb">char</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+<span class="n">convener_id</span> <span class="nb">char</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+<span class="n">subject_id</span> <span class="nb">char</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+<span class="n">title</span> <span class="n">nvarchar</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="p">);</span>
+<span class="cm">/*===================== Class table===================*/</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Room_Class</span>
+<span class="p">(</span>
+<span class="n">room_id</span> <span class="nb">char</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+<span class="n">class_id</span> <span class="nb">char</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+<span class="n">note</span> <span class="n">nvarchar</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="p">);</span>
+<span class="cm">/*===================== Room table===================*/</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Room</span>
+<span class="p">(</span>
+<span class="n">room_id</span> <span class="nb">char</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+<span class="n">number_of_seat</span> <span class="nb">int</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+<span class="n">reserve</span> <span class="nb">bool</span> <span class="k">DEFAULT</span> <span class="k">False</span>
+<span class="p">);</span>
+<span class="cm">/*===================== Tutor table===================*/</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Tutor</span>
+<span class="p">(</span>
+<span class="n">tutor_id</span> <span class="nb">char</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+<span class="n">rank</span> <span class="nb">char</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+<span class="n">tutor_name</span> <span class="n">nvarchar</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+<span class="n">tutor_dob</span> <span class="nb">date</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+<span class="n">tutor_desc</span> <span class="n">nvarchar</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="p">);</span>
+<span class="cm">/*===================== Tutor_Class table===================*/</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Tutor_Class</span> 
+<span class="p">(</span>
+<span class="n">class_id</span> <span class="nb">char</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+<span class="n">tutor_id</span> <span class="nb">char</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+<span class="n">note</span> <span class="n">nvarchar</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="p">);</span>
+<span class="cm">/*===================== Convener table===================*/</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Convener</span>
+<span class="p">(</span>
+<span class="n">convener_id</span> <span class="nb">char</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+<span class="n">rank</span> <span class="nb">char</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+<span class="n">convener_name</span> <span class="n">nvarchar</span><span class="p">(</span><span class="mi">30</span><span class="p">),</span>
+<span class="n">convener_dob</span> <span class="nb">date</span>
+<span class="p">);</span>
+<span class="cm">/*===================== Faculty_Convener table===================*/</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Faculty_Convener</span>
+<span class="p">(</span>
+<span class="n">convener_id</span> <span class="nb">char</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+<span class="n">faculty_id</span> <span class="nb">char</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span>
+<span class="p">);</span> 
+<span class="cm">/*===================== Salary table===================*/</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Salary</span>
+<span class="p">(</span>
+<span class="n">rank</span> <span class="nb">CHAR</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+<span class="n">pay_rate</span> <span class="nb">decimal</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span>
+<span class="n">further_detail</span> <span class="n">nvarchar</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="p">);</span>
+<span class="cm">/*===================== Scholarship table===================*/</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Scholarship</span>
+<span class="p">(</span>
+<span class="n">scholarship_id</span> <span class="nb">char</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+<span class="n">scholarship_value</span> <span class="nb">int</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+<span class="n">scholarship_condition</span> <span class="n">nvarchar</span><span class="p">(</span><span class="mi">30</span><span class="p">),</span>
+<span class="n">scholarship_desc</span> <span class="n">nvarchar</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="p">);</span>
+<span class="cm">/*===================== Provider table===================*/</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Provider</span> 
+<span class="p">(</span>
+<span class="n">provider_id</span> <span class="nb">CHAR</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+<span class="n">provider_name</span> <span class="n">nvarchar</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+<span class="n">provider_business_no</span> <span class="nb">INT</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span>
+<span class="p">);</span>
+<span class="cm">/*===================== Scholarship_Provider table===================*/</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Scholarship_Provider</span>
+<span class="p">(</span>
+<span class="n">scholarship_id</span> <span class="nb">char</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+<span class="n">provider_id</span> <span class="nb">char</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+<span class="n">note</span> <span class="n">nvarchar</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="p">);</span>
+<span class="cm">/*===================== Foreign Key===================*/</span>
+<span class="cm">/*==========Student=========*/</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Student</span> 
+<span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">fk_Student_Faculty</span>
+<span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">faculty_id</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">Faculty</span> <span class="p">(</span><span class="n">faculty_id</span><span class="p">);</span>
+
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Student</span> 
+<span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">fk_Student_Scholarship</span>
+<span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">scholarship_id</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">Scholarship</span> <span class="p">(</span><span class="n">scholarship_id</span><span class="p">);</span>
+<span class="cm">/*=========Result===========*/</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="k">Result</span> 
+<span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">fk_Result_Student</span>
+<span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">student_id</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">Student</span> <span class="p">(</span><span class="n">student_id</span><span class="p">);</span>
+
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="k">Result</span> 
+<span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">fk_Result_Subject</span>
+<span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">subject_id</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">Subject</span> <span class="p">(</span><span class="n">subject_id</span><span class="p">);</span>
+<span class="cm">/*=========Enrolment========*/</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Enrolment</span>
+<span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">fk_Enrolment_Student</span>
+<span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">student_id</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">Student</span> <span class="p">(</span><span class="n">student_id</span><span class="p">);</span>
+
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Enrolment</span>
+<span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">fk_Enrolment_Class</span>
+<span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">class_id</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="k">Class</span> <span class="p">(</span><span class="n">class_id</span><span class="p">);</span>
+<span class="cm">/*=========Scholarship_Provider======*/</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Scholarship_Provider</span>
+<span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">fk_Scholarship_Provider</span>
+<span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">scholarship_id</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">Scholarship</span> <span class="p">(</span><span class="n">scholarship_id</span><span class="p">);</span>
+
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Scholarship_Provider</span>
+<span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">fk_Provider_Scholarship</span>
+<span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">provider_id</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">Provider</span> <span class="p">(</span><span class="n">provider_id</span><span class="p">);</span>
+<span class="cm">/*==========Class==========*/</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="k">Class</span>
+<span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">fk_Class_Convener</span>
+<span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">convener_id</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">Convener</span> <span class="p">(</span><span class="n">convener_id</span><span class="p">);</span>
+
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="k">Class</span>
+<span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">fk_Class_Subject</span>
+<span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">subject_id</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">Subject</span> <span class="p">(</span><span class="n">subject_id</span><span class="p">);</span>
+<span class="cm">/*===========Room_class===========*/</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Room_Class</span>
+<span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">fk_Room_Class</span>
+<span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">room_id</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">Room</span> <span class="p">(</span><span class="n">room_id</span><span class="p">);</span>
+
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Room_Class</span>
+<span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">fk_Class_Room</span>
+<span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">class_id</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="k">Class</span> <span class="p">(</span><span class="n">class_id</span><span class="p">);</span>
+<span class="cm">/*============Convener============*/</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Convener</span>
+<span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">fk_Convener_Salary</span>
+<span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">rank</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">Salary</span> <span class="p">(</span><span class="n">rank</span><span class="p">);</span>
+<span class="cm">/*=============Tutor_Class==========*/</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Tutor_Class</span>
+<span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">fk_Tutor_Class</span>
+<span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">tutor_id</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">Tutor</span> <span class="p">(</span><span class="n">tutor_id</span><span class="p">);</span>
+
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Tutor_Class</span>
+<span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">fk_Class_Tutor</span>
+<span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">class_id</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="k">Class</span> <span class="p">(</span><span class="n">class_id</span><span class="p">);</span>
+<span class="cm">/*===============Tutor==============*/</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Tutor</span>
+<span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">fk_Tutor_Salary</span>
+<span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">rank</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">Salary</span> <span class="p">(</span><span class="n">rank</span><span class="p">);</span>
+<span class="cm">/*================Faculty_Convener==============*/</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Faculty_Convener</span>
+<span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">fk_Faculty_Convener</span>
+<span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">faculty_id</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">Faculty</span> <span class="p">(</span><span class="n">faculty_id</span><span class="p">);</span>
+
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Faculty_Convener</span>
+<span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">fk_Convener_Faculty</span>
+<span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">convener_id</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">Convener</span> <span class="p">(</span><span class="n">convener_id</span><span class="p">);</span>
+
+</code></pre></div></div>
+<p><a name="5-main-usage-and-scripts-for-typical-use-cases"></a></p>
+<h2 id="5-main-usage-and-scripts-for-typical-use-cases">5. Main usage and Scripts for typical use cases</h2>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*=====================Test Data===================*/</span>
+<span class="cm">/*==============Test data Subject =============*/</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Subject</span> <span class="p">(</span><span class="n">subject_id</span><span class="p">,</span> <span class="n">subject_name</span> <span class="p">,</span> <span class="n">credit</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'A01'</span><span class="p">,</span> <span class="s1">'database system'</span><span class="p">,</span><span class="mi">45</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Subject</span> <span class="p">(</span><span class="n">subject_id</span><span class="p">,</span> <span class="n">subject_name</span> <span class="p">,</span> <span class="n">credit</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'B02'</span><span class="p">,</span> <span class="s1">'artificial intelligent'</span><span class="p">,</span><span class="mi">45</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Subject</span> <span class="p">(</span><span class="n">subject_id</span><span class="p">,</span> <span class="n">subject_name</span> <span class="p">,</span> <span class="n">credit</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'C03'</span><span class="p">,</span> <span class="s1">'programming'</span><span class="p">,</span><span class="mi">45</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Subject</span> <span class="p">(</span><span class="n">subject_id</span><span class="p">,</span> <span class="n">subject_name</span> <span class="p">,</span> <span class="n">credit</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'D04'</span><span class="p">,</span> <span class="s1">'graphical design'</span><span class="p">,</span><span class="mi">60</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Subject</span> <span class="p">(</span><span class="n">subject_id</span><span class="p">,</span> <span class="n">subject_name</span> <span class="p">,</span> <span class="n">credit</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'E05'</span><span class="p">,</span> <span class="s1">'biology'</span><span class="p">,</span><span class="mi">60</span><span class="p">);</span>
+
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">Subject</span><span class="p">;</span>
+<span class="cm">/*==============Test data Faculty =============*/</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Faculty</span> <span class="p">(</span> <span class="n">faculty_id</span> <span class="p">,</span> <span class="n">faculty_name</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'AV'</span><span class="p">,</span> <span class="s1">'Engineering'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Faculty</span> <span class="p">(</span> <span class="n">faculty_id</span> <span class="p">,</span> <span class="n">faculty_name</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'TH'</span><span class="p">,</span> <span class="s1">'Information Technology'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Faculty</span> <span class="p">(</span> <span class="n">faculty_id</span> <span class="p">,</span> <span class="n">faculty_name</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'TR'</span><span class="p">,</span> <span class="s1">'Phylosophy'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Faculty</span> <span class="p">(</span> <span class="n">faculty_id</span> <span class="p">,</span> <span class="n">faculty_name</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'VL'</span><span class="p">,</span> <span class="s1">'Physic'</span><span class="p">);</span>
+
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">Faculty</span><span class="p">;</span>
+<span class="cm">/*==============Test data Scholarship=========*/</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Scholarship</span><span class="p">(</span> <span class="n">scholarship_id</span><span class="p">,</span> <span class="n">scholarship_value</span><span class="p">,</span> <span class="n">scholarship_condition</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="mi">130</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span> <span class="s1">'no fail unit'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Scholarship</span><span class="p">(</span> <span class="n">scholarship_id</span><span class="p">,</span> <span class="n">scholarship_value</span><span class="p">,</span> <span class="n">scholarship_condition</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">200000</span><span class="p">,</span> <span class="s1">'at least pass all'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Scholarship</span><span class="p">(</span> <span class="n">scholarship_id</span><span class="p">,</span> <span class="n">scholarship_value</span><span class="p">,</span> <span class="n">scholarship_condition</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="mi">170</span><span class="p">,</span> <span class="mi">300000</span><span class="p">,</span> <span class="s1">'HD on every unit'</span><span class="p">);</span>
+<span class="cm">/*==============Test data Student=============*/</span>
+
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Student</span><span class="p">(</span> <span class="n">student_id</span> <span class="p">,</span> <span class="n">firstname</span> <span class="p">,</span> <span class="n">lastname</span> <span class="p">,</span> <span class="n">gender</span> <span class="p">,</span> <span class="n">date_of_birth</span> <span class="p">,</span> <span class="n">country_of_bird</span><span class="p">,</span> <span class="n">faculty_id</span> <span class="p">,</span><span class="n">scholarship_id</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'A01'</span><span class="p">,</span> <span class="s1">'Andrew'</span><span class="p">,</span> <span class="s1">'Ng'</span><span class="p">,</span> <span class="s1">'female'</span> <span class="p">,</span><span class="s1">'1994/12/12'</span><span class="p">,</span> <span class="s1">'Melbourne'</span><span class="p">,</span><span class="s1">'TH'</span><span class="p">,</span><span class="mi">130</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Student</span><span class="p">(</span> <span class="n">student_id</span> <span class="p">,</span> <span class="n">firstname</span> <span class="p">,</span> <span class="n">lastname</span> <span class="p">,</span> <span class="n">gender</span> <span class="p">,</span> <span class="n">date_of_birth</span> <span class="p">,</span> <span class="n">country_of_bird</span><span class="p">,</span> <span class="n">faculty_id</span> <span class="p">,</span><span class="n">scholarship_id</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'A02'</span><span class="p">,</span> <span class="s1">'Geoff'</span><span class="p">,</span> <span class="s1">'Hinton'</span><span class="p">,</span> <span class="s1">'male'</span><span class="p">,</span><span class="s1">'1994/06/22'</span><span class="p">,</span> <span class="s1">'Sydney'</span><span class="p">,</span><span class="s1">'VL'</span><span class="p">,</span><span class="mi">150</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Student</span><span class="p">(</span> <span class="n">student_id</span> <span class="p">,</span> <span class="n">firstname</span> <span class="p">,</span> <span class="n">lastname</span> <span class="p">,</span> <span class="n">gender</span> <span class="p">,</span> <span class="n">date_of_birth</span> <span class="p">,</span> <span class="n">country_of_bird</span><span class="p">,</span> <span class="n">faculty_id</span> <span class="p">,</span><span class="n">scholarship_id</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'A03'</span><span class="p">,</span> <span class="s1">'Joshen'</span><span class="p">,</span> <span class="s1">'Joe'</span><span class="p">,</span> <span class="s1">'female'</span><span class="p">,</span><span class="s1">'1995/03/24'</span><span class="p">,</span> <span class="s1">'Canberra'</span><span class="p">,</span><span class="s1">'TH'</span><span class="p">,</span><span class="mi">170</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Student</span><span class="p">(</span> <span class="n">student_id</span> <span class="p">,</span> <span class="n">firstname</span> <span class="p">,</span> <span class="n">lastname</span> <span class="p">,</span> <span class="n">gender</span> <span class="p">,</span> <span class="n">date_of_birth</span> <span class="p">,</span> <span class="n">country_of_bird</span><span class="p">,</span> <span class="n">faculty_id</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'A04'</span><span class="p">,</span> <span class="s1">'Palo'</span><span class="p">,</span> <span class="s1">'Kai'</span><span class="p">,</span> <span class="s1">'male'</span><span class="p">,</span><span class="s1">'1994/03/14'</span><span class="p">,</span> <span class="s1">'Melbourne'</span><span class="p">,</span><span class="s1">'AV'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Student</span><span class="p">(</span> <span class="n">student_id</span> <span class="p">,</span> <span class="n">firstname</span> <span class="p">,</span> <span class="n">lastname</span> <span class="p">,</span> <span class="n">gender</span> <span class="p">,</span> <span class="n">date_of_birth</span> <span class="p">,</span> <span class="n">country_of_bird</span><span class="p">,</span> <span class="n">faculty_id</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'B01'</span><span class="p">,</span> <span class="s1">'Kaio'</span><span class="p">,</span> <span class="s1">'Sing'</span><span class="p">,</span> <span class="s1">'female'</span><span class="p">,</span><span class="s1">'1994/11/01'</span><span class="p">,</span> <span class="s1">'Melbourne'</span><span class="p">,</span><span class="s1">'TR'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Student</span><span class="p">(</span> <span class="n">student_id</span> <span class="p">,</span> <span class="n">firstname</span> <span class="p">,</span> <span class="n">lastname</span> <span class="p">,</span> <span class="n">gender</span> <span class="p">,</span> <span class="n">date_of_birth</span> <span class="p">,</span> <span class="n">country_of_bird</span><span class="p">,</span> <span class="n">faculty_id</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'B02'</span><span class="p">,</span> <span class="s1">'andrew'</span><span class="p">,</span> <span class="s1">'a'</span><span class="p">,</span> <span class="s1">'female'</span><span class="p">,</span><span class="s1">'1994/01/22'</span><span class="p">,</span> <span class="s1">'Melbourne'</span><span class="p">,</span><span class="s1">'AV'</span><span class="p">);</span>
+
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">Student</span><span class="p">;</span>
+<span class="cm">/*====================Test data Result==================*/</span>
+
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">Result</span> <span class="p">(</span><span class="n">student_id</span><span class="p">,</span><span class="n">subject_id</span><span class="p">,</span><span class="n">attempt</span><span class="p">,</span><span class="n">score</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'A01'</span><span class="p">,</span><span class="s1">'A01'</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">Result</span> <span class="p">(</span><span class="n">student_id</span><span class="p">,</span><span class="n">subject_id</span><span class="p">,</span><span class="n">attempt</span><span class="p">,</span><span class="n">score</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'A01'</span><span class="p">,</span><span class="s1">'A01'</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">Result</span> <span class="p">(</span><span class="n">student_id</span><span class="p">,</span><span class="n">subject_id</span><span class="p">,</span><span class="n">attempt</span><span class="p">,</span><span class="n">score</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'A01'</span><span class="p">,</span><span class="s1">'B02'</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">Result</span> <span class="p">(</span><span class="n">student_id</span><span class="p">,</span><span class="n">subject_id</span><span class="p">,</span><span class="n">attempt</span><span class="p">,</span><span class="n">score</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'A01'</span><span class="p">,</span><span class="s1">'C03'</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">Result</span> <span class="p">(</span><span class="n">student_id</span><span class="p">,</span><span class="n">subject_id</span><span class="p">,</span><span class="n">attempt</span><span class="p">,</span><span class="n">score</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'A02'</span><span class="p">,</span><span class="s1">'A01'</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">.</span><span class="mi">5</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">Result</span> <span class="p">(</span><span class="n">student_id</span><span class="p">,</span><span class="n">subject_id</span><span class="p">,</span><span class="n">attempt</span><span class="p">,</span><span class="n">score</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'A02'</span><span class="p">,</span><span class="s1">'A01'</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">Result</span> <span class="p">(</span><span class="n">student_id</span><span class="p">,</span><span class="n">subject_id</span><span class="p">,</span><span class="n">attempt</span><span class="p">,</span><span class="n">score</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'A02'</span><span class="p">,</span><span class="s1">'C03'</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">Result</span> <span class="p">(</span><span class="n">student_id</span><span class="p">,</span><span class="n">subject_id</span><span class="p">,</span><span class="n">attempt</span><span class="p">,</span><span class="n">score</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'A02'</span><span class="p">,</span><span class="s1">'E05'</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">Result</span> <span class="p">(</span><span class="n">student_id</span><span class="p">,</span><span class="n">subject_id</span><span class="p">,</span><span class="n">attempt</span><span class="p">,</span><span class="n">score</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'A03'</span><span class="p">,</span><span class="s1">'A01'</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">Result</span> <span class="p">(</span><span class="n">student_id</span><span class="p">,</span><span class="n">subject_id</span><span class="p">,</span><span class="n">attempt</span><span class="p">,</span><span class="n">score</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'A03'</span><span class="p">,</span><span class="s1">'A01'</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">Result</span> <span class="p">(</span><span class="n">student_id</span><span class="p">,</span><span class="n">subject_id</span><span class="p">,</span><span class="n">attempt</span><span class="p">,</span><span class="n">score</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'A03'</span><span class="p">,</span><span class="s1">'C03'</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">.</span><span class="mi">5</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">Result</span> <span class="p">(</span><span class="n">student_id</span><span class="p">,</span><span class="n">subject_id</span><span class="p">,</span><span class="n">attempt</span><span class="p">,</span><span class="n">score</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'A03'</span><span class="p">,</span><span class="s1">'C03'</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">Result</span> <span class="p">(</span><span class="n">student_id</span><span class="p">,</span><span class="n">subject_id</span><span class="p">,</span><span class="n">attempt</span><span class="p">,</span><span class="n">score</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'A04'</span><span class="p">,</span><span class="s1">'E05'</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">Result</span> <span class="p">(</span><span class="n">student_id</span><span class="p">,</span><span class="n">subject_id</span><span class="p">,</span><span class="n">attempt</span><span class="p">,</span><span class="n">score</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'B01'</span><span class="p">,</span><span class="s1">'A01'</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">Result</span> <span class="p">(</span><span class="n">student_id</span><span class="p">,</span><span class="n">subject_id</span><span class="p">,</span><span class="n">attempt</span><span class="p">,</span><span class="n">score</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'B01'</span><span class="p">,</span><span class="s1">'C03'</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">.</span><span class="mi">5</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">Result</span> <span class="p">(</span><span class="n">student_id</span><span class="p">,</span><span class="n">subject_id</span><span class="p">,</span><span class="n">attempt</span><span class="p">,</span><span class="n">score</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'B01'</span><span class="p">,</span><span class="s1">'C03'</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">Result</span> <span class="p">(</span><span class="n">student_id</span><span class="p">,</span><span class="n">subject_id</span><span class="p">,</span><span class="n">attempt</span><span class="p">,</span><span class="n">score</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'B02'</span><span class="p">,</span><span class="s1">'B02'</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">Result</span> <span class="p">(</span><span class="n">student_id</span><span class="p">,</span><span class="n">subject_id</span><span class="p">,</span><span class="n">attempt</span><span class="p">,</span><span class="n">score</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'B02'</span><span class="p">,</span><span class="s1">'D04'</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span>
+
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="k">Result</span><span class="p">;</span>
+<span class="cm">/*====================Test data Provider==================*/</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Provider</span> <span class="p">(</span><span class="n">provider_id</span><span class="p">,</span> <span class="n">provider_name</span><span class="p">,</span> <span class="n">provider_business_no</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'P01'</span><span class="p">,</span> <span class="s1">'government'</span><span class="p">,</span> <span class="mi">111221</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Provider</span> <span class="p">(</span><span class="n">provider_id</span><span class="p">,</span> <span class="n">provider_name</span><span class="p">,</span> <span class="n">provider_business_no</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'P02'</span><span class="p">,</span> <span class="s1">'monash provider'</span><span class="p">,</span> <span class="mi">412321</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Provider</span> <span class="p">(</span><span class="n">provider_id</span><span class="p">,</span> <span class="n">provider_name</span><span class="p">,</span> <span class="n">provider_business_no</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'P03'</span><span class="p">,</span> <span class="s1">'swinburne provider'</span><span class="p">,</span> <span class="mi">221921</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Provider</span> <span class="p">(</span><span class="n">provider_id</span><span class="p">,</span> <span class="n">provider_name</span><span class="p">,</span> <span class="n">provider_business_no</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'P04'</span><span class="p">,</span> <span class="s1">'Latrobe Uni provider'</span><span class="p">,</span> <span class="mi">114223</span><span class="p">);</span>
+
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">Provider</span><span class="p">;</span>
+<span class="cm">/*=====================Test data Scholarship_Provider*/</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Scholarship_Provider</span> <span class="p">(</span><span class="n">scholarship_id</span><span class="p">,</span> <span class="n">provider_id</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="mi">130</span><span class="p">,</span> <span class="s1">'P01'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Scholarship_Provider</span> <span class="p">(</span><span class="n">scholarship_id</span><span class="p">,</span> <span class="n">provider_id</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="s1">'P03'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Scholarship_Provider</span> <span class="p">(</span><span class="n">scholarship_id</span><span class="p">,</span> <span class="n">provider_id</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="s1">'P03'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p><strong>Some typical usage:</strong></p>
+
+<ol>
+  <li>Update information
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">UPDATE</span> <span class="err">…</span> <span class="k">SET</span> <span class="err">…</span> <span class="k">WHERE</span>
+<span class="k">DELETE</span> <span class="err">…</span> <span class="k">FROM</span> <span class="err">…</span> <span class="k">WHERE</span>
+</code></pre></div>    </div>
+    <p>Example:
+Change credit point worth of subject with subject_id A01</p>
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">UPDATE</span> <span class="n">Subject</span>
+<span class="k">SET</span> <span class="n">credit</span> <span class="o">=</span> <span class="mi">12</span><span class="p">.</span><span class="mi">5</span>
+<span class="k">WHERE</span> <span class="n">subject_id</span> <span class="o">=</span> <span class="s1">'C03'</span><span class="p">;</span>
+</code></pre></div>    </div>
+    <p>Change firstname and lastname of student</p>
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">UPDATE</span> <span class="n">Student</span>
+<span class="k">SET</span> <span class="n">firstname</span> <span class="o">=</span> <span class="s1">'Andrew'</span><span class="p">,</span> <span class="n">lastname</span> <span class="o">=</span> <span class="s1">'Lai'</span>
+<span class="k">WHERE</span> <span class="n">student_id</span> <span class="o">=</span> <span class="s1">'A02'</span>
+</code></pre></div>    </div>
+    <p>Delete entire row of Result table where number of attemp is equal 2 and score is less than 25</p>
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">DELETE</span> 	
+<span class="k">FROM</span> <span class="k">Result</span>
+<span class="k">WHERE</span> <span class="n">attempt</span> <span class="o">=</span> <span class="mi">2</span> <span class="k">and</span> <span class="n">score</span> <span class="o">&lt;</span> <span class="mi">25</span>
+</code></pre></div>    </div>
+    <p><strong>NOTE</strong>: It’s impossible to update a parent row where the parent is affected by a foreign key, for example, the following command will not be executed:</p>
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">DELETE</span> 
+<span class="k">FROM</span> <span class="n">Student</span>
+<span class="k">WHERE</span> <span class="n">scholarship_id</span> <span class="o">=</span> <span class="mi">130</span>
+</code></pre></div>    </div>
+    <p>The reason is that Student table is a parent of Scholarship table and they are connected by scholarship_id, if we want to change student scholarship, we need to change it from scholarship_table: <code class="language-plaintext highlighter-rouge">DELETE * FROM Scholarship WHERE Schoalrship_id = 130</code></p>
+  </li>
+  <li>Viewing data with simple querry
+Viewing information of student in a table using <code class="language-plaintext highlighter-rouge">SELECT</code> command, name are listed by student ID
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">student_id</span> <span class="k">as</span> <span class="s1">'Student ID'</span><span class="p">,</span> <span class="n">firstname</span> <span class="k">as</span> <span class="s1">'First name'</span><span class="p">,</span> <span class="n">lastname</span> <span class="k">as</span> <span class="s1">'Last name'</span><span class="p">,</span> <span class="n">scholarship_id</span> <span class="k">as</span> <span class="s1">'Scholarship ID'</span>
+<span class="k">FROM</span> <span class="n">Student</span>
+<span class="n">ORDERBY</span> <span class="n">student_id</span> <span class="k">ASC</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+<div class="imgcap">
+	<img style="display: inline-block; width: 55%;" src="/public/post-assets/UniversityMySQL/result1.png" width="500" align="center" />
+	<div class="thecap">Result</div>
+</div>
+  	Viewing imformation of student, first name and last name are concatenated. Order by Gender
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">student_id</span> <span class="k">AS</span> <span class="s1">'Student ID'</span><span class="p">,</span>  <span class="n">CONCAT</span><span class="p">(</span><span class="n">firstname</span><span class="p">,</span><span class="s1">' '</span><span class="p">,</span><span class="n">lastname</span><span class="p">)</span> <span class="k">as</span><span class="s1">'Student full name'</span><span class="p">,</span><span class="n">gender</span> <span class="k">as</span> <span class="s1">'Gender'</span><span class="p">,</span> <span class="n">date_of_birth</span> <span class="k">as</span> <span class="s1">'DOB'</span>
+<span class="k">FROM</span> <span class="n">Student</span> 
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">gender</span> <span class="k">ASC</span><span class="p">;</span>
+</code></pre></div></div>
+<div class="imgcap">
+	<img style="display: inline-block; width: 50%;" src="/public/post-assets/UniversityMySQL/result2.png" width="500" align="center" />
+	<div class="thecap">Result</div>
+</div>
+<p><strong>Note</strong>: It’s also possible to view male student or female student only by adding a WHERE condition: WHERE gender = ‘male’</p>
+<ol>
+  <li>Viewing data with join command, join 2 tables
+The following command listed all student that have scholarship and their scholarship value is more than 100000 dollars
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">st</span><span class="p">.</span><span class="n">student_id</span> <span class="k">AS</span> <span class="s1">'Student ID'</span><span class="p">,</span> <span class="n">CONCAT</span><span class="p">(</span><span class="n">st</span><span class="p">.</span><span class="n">firstname</span><span class="p">,</span><span class="s1">' '</span><span class="p">,</span><span class="n">st</span><span class="p">.</span><span class="n">lastnawweame</span><span class="p">)</span> <span class="k">as</span><span class="s1">'Student full name'</span><span class="p">,</span> <span class="n">sc</span><span class="p">.</span><span class="n">scholarship_value</span> <span class="k">as</span> <span class="s1">'Scholarship value'</span>
+<span class="k">FROM</span> <span class="n">Student</span> <span class="k">AS</span> <span class="n">st</span>
+<span class="k">NATURAL</span> <span class="k">JOIN</span> <span class="n">Scholarship</span> <span class="k">as</span> <span class="n">sc</span>
+<span class="k">WHERE</span> <span class="n">sc</span><span class="p">.</span><span class="n">scholarship_value</span> <span class="o">&gt;</span> <span class="mi">100000</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">st</span><span class="p">.</span><span class="n">student_id</span> <span class="k">ASC</span><span class="p">;</span> 
+</code></pre></div>    </div>
+  </li>
+</ol>
+<div class="imgcap">
+	<img style="display: inline-block; width: 45%;" src="/public/post-assets/UniversityMySQL/result3.png" width="500" align="center" />
+	<div class="thecap">Result</div>
+</div>
+<ol>
+  <li>Checking not exist data
+The following command returns all student that fail 0 unit. (All score need to more more than 5)
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">student_id</span>
+<span class="k">FROM</span> <span class="n">Student</span> <span class="n">s</span>
+<span class="k">WHERE</span> <span class="k">NOT</span> <span class="k">EXISTS</span> 
+<span class="p">(</span>
+<span class="k">SELECT</span> <span class="o">*</span>
+<span class="k">FROM</span> <span class="k">Result</span>
+<span class="k">WHERE</span> <span class="n">score</span><span class="o">&lt;=</span><span class="mi">5</span> <span class="k">AND</span> <span class="n">student_id</span><span class="o">=</span><span class="n">s</span><span class="p">.</span><span class="n">student_id</span>
+<span class="p">);</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+<div class="imgcap">
+	<img style="display: inline-block; width: 10%;" src="/public/post-assets/UniversityMySQL/result4.png" width="500" align="center" />
+	<div class="thecap">Result</div>
+</div>
+<ol>
+  <li>Union two select commands with COUNT, HAVING, GROUP BY
+Return the faculty that have the largest number of student having scholarship and faculty with smallest number  of student having scholarship.
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">Select</span> <span class="n">faculty_id</span><span class="p">,</span><span class="k">count</span><span class="p">(</span><span class="n">student_id</span><span class="p">)</span> <span class="k">as</span> <span class="s1">'Number of student'</span>
+<span class="k">From</span> <span class="n">Student</span>
+<span class="k">Where</span> <span class="n">scholarship_id</span> <span class="k">is</span> <span class="k">not</span> <span class="k">null</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">faculty_id</span>
+<span class="k">Having</span> <span class="k">count</span><span class="p">(</span><span class="n">student_id</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="k">All</span><span class="p">(</span><span class="k">Select</span> <span class="k">count</span><span class="p">(</span><span class="n">student_id</span><span class="p">)</span>
+<span class="k">From</span> <span class="n">Student</span>
+<span class="k">Where</span> <span class="n">scholarship_id</span> <span class="k">is</span> <span class="k">not</span> <span class="k">null</span>
+<span class="k">Group</span> <span class="k">By</span> <span class="n">faculty_id</span>
+<span class="p">)</span>
+<span class="k">UNION</span>
+<span class="k">Select</span> <span class="n">faculty_id</span><span class="p">,</span><span class="k">count</span><span class="p">(</span><span class="n">student_id</span><span class="p">)</span> <span class="k">as</span> <span class="s1">'Number of student'</span>
+<span class="k">From</span> <span class="n">Student</span>
+<span class="k">Where</span> <span class="n">scholarship_id</span> <span class="k">is</span> <span class="k">not</span> <span class="k">null</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">faculty_id</span>
+<span class="k">Having</span> <span class="k">count</span><span class="p">(</span><span class="n">student_id</span><span class="p">)</span><span class="o">&lt;=</span><span class="k">All</span><span class="p">(</span><span class="k">Select</span> <span class="k">count</span><span class="p">(</span><span class="n">student_id</span><span class="p">)</span>
+<span class="k">From</span> <span class="n">Student</span>
+<span class="k">Where</span> <span class="n">scholarship_id</span> <span class="k">is</span> <span class="k">not</span> <span class="k">null</span>
+<span class="k">Group</span> <span class="k">By</span> <span class="n">faculty_id</span>
+<span class="p">);</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Create VIEW
+View is a new table but the different is that this table is readonly.
+Example: Create a view called Student_no_fail_unit that contains information about student that fails no unit.
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">VIEW</span> <span class="n">Student_no_fail_unit</span>
+<span class="k">AS</span>
+<span class="k">SELECT</span> <span class="n">Student</span><span class="p">.</span><span class="n">student_id</span> <span class="p">,</span> <span class="n">firstname</span><span class="p">,</span> <span class="n">lastname</span> <span class="p">,</span> <span class="n">gender</span><span class="p">,</span> <span class="n">scholarship_id</span>
+<span class="k">FROM</span> <span class="n">Student</span><span class="p">,</span> <span class="k">Result</span>
+<span class="k">WHERE</span> <span class="n">Student</span><span class="p">.</span><span class="n">student_id</span> <span class="o">=</span> <span class="k">Result</span><span class="p">.</span><span class="n">student_id</span> 
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">Student</span><span class="p">.</span><span class="n">student_id</span> <span class="p">,</span> <span class="n">firstname</span><span class="p">,</span> <span class="n">lastname</span> <span class="p">,</span> <span class="n">gender</span><span class="p">,</span> <span class="n">scholarship_id</span>
+<span class="k">HAVING</span> <span class="k">MIN</span><span class="p">(</span><span class="n">score</span><span class="p">)</span><span class="o">&gt;=</span><span class="mi">5</span><span class="p">;</span>
+</code></pre></div>    </div>
+    <p>It’s possible to read this table as usual, for example:
+<code class="language-plaintext highlighter-rouge">SELECT * FROM Student_no_fail_unit;</code></p>
+  </li>
+</ol>
+<div class="imgcap">
+	<img style="display: inline-block; width: 50%;" src="/public/post-assets/UniversityMySQL/result5.png" width="500" align="center" />
+	<div class="thecap">Result</div>
+</div>
+
+<p><a name="6-scripts-and-report"></a></p>
+<h2 id="6-scripts-and-report">6. Scripts and Report</h2>
+<p><a href="dunglai.github.io/public/post-assets/UniversityMySQL/script.sql">Download SQL script</a></p>
+
+<p><a href="dunglai.github.io/public/post-assets/UniversityMySQL/report.pdf">Donwload PDF Report</a></p>
+
+<p><a href="dunglai.github.io/public/post-assets/UniversityMySQL/designreport.docx">Donwload Word Report</a></p>
+
+</div>
+        <!-- Start of StatCounter Code for Default Guide -->
+        <hr>
+Total visits:
+<script type="text/javascript">
+var sc_project=11553218; 
+var sc_invisible=0; 
+var sc_security="55ea133f"; 
+var sc_text=2; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="Web Analytics
+Made Easy - StatCounter" href="http://statcounter.com/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11553218/0/55ea133f/0/" alt="Web
+Analytics Made Easy - StatCounter"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+<a href="http://statcounter.com/p11553218/?guest=1">(Powered by Statcounter)</a>
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2018/07/26/linked-list/">
+            Linked List, Stack, Queue
+            <small>26 Jul 2018</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2018/07/10/cars-visualisation/">
+            Interactive Visualisation
+            <small>10 Jul 2018</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2018/04/09/NavigationTrainer/">
+            Journey Preparation Tool Project
+            <small>09 Apr 2018</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2018/01/25/SVD/">
+            Singular Value Decomposition
+            <small>25 Jan 2018</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2017/12/21/gradient-descent/">
+            Gradient Descent
+            <small>21 Dec 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://dunglai-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+   
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if (!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+
+  
+</html>

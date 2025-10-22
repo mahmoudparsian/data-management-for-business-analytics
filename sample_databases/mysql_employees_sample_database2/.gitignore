@@ -1,0 +1,6 @@
+.DS_Store
+
+test_db/
+initdb/data/
+
+!initdb/test_db/

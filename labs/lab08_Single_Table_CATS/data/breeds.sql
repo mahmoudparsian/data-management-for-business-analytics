@@ -1,0 +1,16 @@
+INSERT INTO breeds (breed, description) VALUES
+  ('Persian', 'long-haired, calm, affectionate'),
+  ('Maine Coon', 'large, friendly, sociable gentle giant'),
+  ('Siamese', 'vocal, slender, striking blue eyes'),
+  ('Bengal', 'spotted or rosetted coat, active, wild appearance'),
+  ('Sphynx', 'hairless, affectionate, unique look'),
+  ('Ragdoll', 'relaxed, cuddly, blue-eyed'),
+  ('British Shorthair', 'round face, plush coat, calm'),
+  ('Scottish Fold', 'folded ears, sweet temperament'),
+  ('Abyssinian', 'sleek, ticked coat, very active'),
+  ('Oriental Shorthair', 'diverse colors and patterns, slender build'),
+  ('Russian Blue', 'short blue-gray coat, bright green eyes'),
+  ('Norwegian Forest Cat', 'thick fur, strong climber'),
+  ('American Shorthair', 'adaptable, easygoing'),
+  ('Exotic Shorthair', 'similar to Persian, but short coat'),
+  ('Turkish Angora', 'elegant, silky coat, playful');

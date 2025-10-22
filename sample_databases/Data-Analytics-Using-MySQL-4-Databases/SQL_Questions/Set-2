@@ -1,0 +1,61 @@
+# Sales Data Analysis Script
+
+This repository contains SQL scripts to create a `sales_data` table, populate it with sample data, and execute queries for data analysis. The focus is on aggregating data based on categories and months.
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+Ensure you have:
+- MySQL or PostgreSQL installed on your system.
+- Access to a SQL client (e.g., MySQL Workbench, pgAdmin, or a command-line interface).
+
+---
+
+## SQL Script
+
+### Step 1: Create the `sales_data` Table
+
+#### For MySQL and PostgreSQL:
+```sql
+CREATE TABLE sales_data (
+    month VARCHAR(10),
+    category VARCHAR(20),
+    amount NUMERIC
+);
+
+INSERT INTO sales_data (month, category, amount) VALUES
+    ('January', 'Electronics', 1500),
+    ('January', 'Clothing', 1200),
+    ('February', 'Electronics', 1800),
+    ('February', 'Clothing', 1300),
+    ('March', 'Electronics', 1600),
+    ('March', 'Clothing', 1100),
+    ('April', 'Electronics', 1700),
+    ('April', 'Clothing', 1400);
+
+SELECT * FROM sales_data;
+
+SELECT 
+    month,
+    SUM(CASE WHEN category = 'Clothing' THEN amount END) AS Clothing,
+    SUM(CASE WHEN category = 'Electronics' THEN amount END) AS Electronics
+FROM 
+    sales_data
+GROUP BY 
+    month
+ORDER BY 
+    month;
+
+-- for PostgreSQL 
+
+SELECT * FROM 
+    crosstab('SELECT month, category, amount FROM sales_data ORDER BY 1, 2')
+AS ct (
+    month VARCHAR, 
+    "Clothing" NUMERIC, 
+    "Electronics" NUMERIC
+);
+

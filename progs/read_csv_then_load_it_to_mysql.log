@@ -1,0 +1,60 @@
+% python3 read_csv_then_load_it_to_mysql.py employee.csv
+
+csv_file= employee.csv
+
+df=    emp_id first_name last_name   department  salary   hire_date
+0       1       John       Doe  Engineering   75000  2018-03-15
+1       2       Jane     Smith           HR   60000  2019-06-01
+2       3     Robert     Brown      Finance   82000  2017-11-20
+3       4      Linda   Johnson  Engineering   95000  2015-05-23
+4       5    Michael  Williams    Marketing   67000  2020-01-12
+5       6      Susan     Jones      Finance   73000  2016-09-18
+6       7      David    Miller  Engineering   88000  2014-07-09
+7       8      Karen     Davis        Sales   64000  2021-02-25
+8       9      James    Wilson    Marketing   70000  2019-10-10
+9      10   Patricia     Moore           HR   62000  2018-12-05
+
+✅ Connected to MySQL database
+✅ Employee table is ready
+row number is inserted: 0
+row number is inserted: 1
+row number is inserted: 2
+row number is inserted: 3
+row number is inserted: 4
+row number is inserted: 5
+row number is inserted: 6
+row number is inserted: 7
+row number is inserted: 8
+row number is inserted: 9
+✅ 1 rows inserted/updated successfully
+🔒 MySQL connection closed
+
+mysql> use test_db2;
+Database changed
+
+mysql> show tables;
++--------------------+
+| Tables_in_test_db2 |
++--------------------+
+| employee           |
++--------------------+
+1 row in set (0.00 sec)
+
+
+mysql> select * from employee;
++--------+------------+-----------+-------------+----------+------------+
+| emp_id | first_name | last_name | department  | salary   | hire_date  |
++--------+------------+-----------+-------------+----------+------------+
+|      1 | John       | Doe       | Engineering | 75000.00 | 2018-03-15 |
+|      2 | Jane       | Smith     | HR          | 60000.00 | 2019-06-01 |
+|      3 | Robert     | Brown     | Finance     | 82000.00 | 2017-11-20 |
+|      4 | Linda      | Johnson   | Engineering | 95000.00 | 2015-05-23 |
+|      5 | Michael    | Williams  | Marketing   | 67000.00 | 2020-01-12 |
+|      6 | Susan      | Jones     | Finance     | 73000.00 | 2016-09-18 |
+|      7 | David      | Miller    | Engineering | 88000.00 | 2014-07-09 |
+|      8 | Karen      | Davis     | Sales       | 64000.00 | 2021-02-25 |
+|      9 | James      | Wilson    | Marketing   | 70000.00 | 2019-10-10 |
+|     10 | Patricia   | Moore     | HR          | 62000.00 | 2018-12-05 |
++--------+------------+-----------+-------------+----------+------------+
+10 rows in set (0.00 sec)
+

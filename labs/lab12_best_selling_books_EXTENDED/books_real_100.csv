@@ -1,0 +1,101 @@
+book_id,title,author,year_published,genre,sales_band,source
+1,Don Quixote,Miguel de Cervantes,1605,Classic,50M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+2,A Tale of Two Cities,Charles Dickens,1859,Classic,50M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+3,The Lord of the Rings,J. R. R. Tolkien,1954,Fantasy,50M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+4,The Little Prince,Antoine de Saint-Exupéry,1943,Children,50M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+5,Harry Potter and the Philosopher's Stone,J. K. Rowling,1997,Fantasy,50M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+6,And Then There Were None,Agatha Christie,1939,Mystery,50M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+7,Dream of the Red Chamber,Cao Xueqin,1754,Classic,50M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+8,The Hobbit,J. R. R. Tolkien,1937,Fantasy,50M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+9,She: A History of Adventure,H. Rider Haggard,1887,Adventure,50M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+10,"The Lion, the Witch and the Wardrobe",C. S. Lewis,1950,Fantasy,50M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+11,The Da Vinci Code,Dan Brown,2003,Thriller,50M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+12,The Alchemist,Paulo Coelho,1988,Fable,50M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+13,Harry Potter and the Chamber of Secrets,J. K. Rowling,1998,Fantasy,40–50M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+14,Harry Potter and the Prisoner of Azkaban,J. K. Rowling,1999,Fantasy,40–50M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+15,Harry Potter and the Goblet of Fire,J. K. Rowling,2000,Fantasy,40–50M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+16,Harry Potter and the Order of the Phoenix,J. K. Rowling,2003,Fantasy,40–50M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+17,Harry Potter and the Half-Blood Prince,J. K. Rowling,2005,Fantasy,40–50M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+18,Harry Potter and the Deathly Hallows,J. K. Rowling,2007,Fantasy,40–50M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+19,The Catcher in the Rye,J. D. Salinger,1951,Literary,20–40M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+20,To Kill a Mockingbird,Harper Lee,1960,Literary,40M±,https://en.wikipedia.org/wiki/List_of_best-selling_books
+21,The Very Hungry Caterpillar,Eric Carle,1969,Children,40M±,https://en.wikipedia.org/wiki/List_of_best-selling_books
+22,The Godfather,Mario Puzo,1969,Crime,20–40M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+23,The Girl with the Dragon Tattoo,Stieg Larsson,2005,Thriller,20–40M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+24,The Hunger Games,Suzanne Collins,2008,YA Dystopian,20–40M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+25,Catching Fire,Suzanne Collins,2009,YA Dystopian,20–40M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+26,Mockingjay,Suzanne Collins,2010,YA Dystopian,20–40M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+27,The Fault in Our Stars,John Green,2012,YA,20–30M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+28,The Girl on the Train,Paula Hawkins,2015,Thriller,20–30M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+29,Gone Girl,Gillian Flynn,2012,Thriller,20–30M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+30,Angels & Demons,Dan Brown,2000,Thriller,30–40M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+31,The Celestine Prophecy,James Redfield,1993,Spiritual,20–30M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+32,Cosmos,Carl Sagan,1980,Popular Science,30–40M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+33,Sapiens: A Brief History of Humankind,Yuval Noah Harari,2011,Non-fiction,20M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+34,The Kite Runner,Khaled Hosseini,2003,Literary,20M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+35,The Book Thief,Markus Zusak,2005,Historical,15–20M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+36,The Name of the Rose,Umberto Eco,1980,Historical Mystery,20M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+37,The Thorn Birds,Colleen McCullough,1977,Family Saga,30M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+38,The Exorcist,William Peter Blatty,1971,Horror,20M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+39,The Firm,John Grisham,1991,Legal Thriller,20M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+40,The Shack,William P. Young,2007,Christian,20M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+41,The Purpose Driven Life,Rick Warren,2002,Christian,30M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+42,The 7 Habits of Highly Effective People,Stephen R. Covey,1989,Business,25M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+43,The Diary of a Young Girl,Anne Frank,1947,Memoir,30M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+44,Think and Grow Rich,Napoleon Hill,1937,Business,20–30M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+45,Where the Crawdads Sing,Delia Owens,2018,Literary,15–20M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+46,Life of Pi,Yann Martel,2001,Adventure,10–20M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+47,Fahrenheit 451,Ray Bradbury,1953,Dystopian,10–20M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+48,The Outsiders,S. E. Hinton,1967,YA,10–20M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+49,Shōgun,James Clavell,1975,Historical,10–20M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+50,Dune,Frank Herbert,1965,Science Fiction,20M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+51,The Neverending Story,Michael Ende,1979,Fantasy,15–20M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+52,Matilda,Roald Dahl,1988,Children,15–20M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+53,Goodnight Moon,Margaret Wise Brown,1947,Children,15–20M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+54,Charlie and the Chocolate Factory,Roald Dahl,1964,Children,20M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+55,Pride and Prejudice,Jane Austen,1813,Classic,20M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+56,Gone with the Wind,Margaret Mitchell,1936,Historical,30M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+57,The Adventures of Sherlock Holmes,Arthur Conan Doyle,1892,Mystery,20M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+58,One Hundred Years of Solitude,Gabriel García Márquez,1967,Magical Realism,30M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+59,The Old Man and the Sea,Ernest Hemingway,1952,Literary,20M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+60,The Stranger,Albert Camus,1942,Philosophical,20M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+61,The Metamorphosis,Franz Kafka,1915,Novella,10M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+62,The Pilgrim's Progress,John Bunyan,1678,Religious,50M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+63,Heidi,Johanna Spyri,1881,Children,50M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+64,Common Sense Book of Baby and Child Care,Benjamin Spock,1946,Non-fiction,50M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+65,Anne of Green Gables,L. M. Montgomery,1908,Children,50M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+66,The Eagle Has Landed,Jack Higgins,1975,Thriller,20M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+67,The Secret,Rhonda Byrne,2006,Self-help,30M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+68,The Help,Kathryn Stockett,2009,Literary,10M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+69,The Lovely Bones,Alice Sebold,2002,Literary,10M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+70,The Witcher: The Last Wish,Andrzej Sapkowski,1993,Fantasy,10M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+71,The Martian,Andy Weir,2011,Science Fiction,10M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+72,The Silence of the Lambs,Thomas Harris,1988,Thriller,10M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+73,Who Moved My Cheese?,Spencer Johnson,1998,Business,20M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+74,The Power of Positive Thinking,Norman Vincent Peale,1952,Self-help,20M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+75,The Subtle Art of Not Giving a F*ck,Mark Manson,2016,Self-help,10M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+76,The Cat in the Hat,Dr. Seuss,1957,Children,10M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+77,Green Eggs and Ham,Dr. Seuss,1960,Children,10M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+78,The Old Curiosity Shop,Charles Dickens,1841,Classic,20M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+79,Lolita,Vladimir Nabokov,1955,Literary,10M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+80,Little House on the Prairie,Laura Ingalls Wilder,1935,Children,20M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+81,The Hite Report,Shere Hite,1976,Non-fiction,20M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+82,The Joy of Sex,Alex Comfort,1972,Non-fiction,20M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+83,All the Light We Cannot See,Anthony Doerr,2014,Historical,15M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+84,Jonathan Livingston Seagull,Richard Bach,1970,Fable,40M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+85,The Tale of Peter Rabbit,Beatrix Potter,1902,Children,45M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+86,A Message to Garcia,Elbert Hubbard,1899,Essay,37M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+87,Flowers in the Attic,V. C. Andrews,1979,Gothic,40M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+88,Sophie's World,Jostein Gaarder,1991,Philosophical,40M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+89,Alcoholics Anonymous,Bill W.,1939,Self-help,37M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+90,Kane and Abel,Jeffrey Archer,1979,Novel,37M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+91,Things Fall Apart,Chinua Achebe,1958,Novel,20M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+92,The Bermuda Triangle,Charles Berlitz,1974,Non-fiction,20M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+93,Dork Diaries: Tales from a Not-So-Fabulous Life,Rachel Renée Russell,2009,Children,10M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+94,The Shadow of the Wind,Carlos Ruiz Zafón,2001,Mystery,15M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+95,The Grapes of Wrath,John Steinbeck,1939,Literary,15M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+96,The Hitchhiker's Guide to the Galaxy,Douglas Adams,1979,Science Fiction,14M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+97,The Bridges of Madison County,Robert James Waller,1992,Romance,20–40M,https://en.wikipedia.org/wiki/List_of_best-selling_books
+98,The Name of the Rose,Umberto Eco,1980,Historical Mystery,20M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+99,The Eagle Has Landed,Jack Higgins,1975,Thriller,20M+,https://en.wikipedia.org/wiki/List_of_best-selling_books
+100,The Girl with the Dragon Tattoo,Stieg Larsson,2005,Thriller,20–40M,https://en.wikipedia.org/wiki/List_of_best-selling_books

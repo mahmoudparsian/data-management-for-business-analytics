@@ -1,0 +1,121 @@
+id,name,date_of_birth,num_of_tricks,country,gender,breed,age
+1,Luna,2016-11-09,4,USA,FEMALE,Ragdoll,5
+2,Oliver,2022-07-11,2,USA,FEMALE,Ragdoll,5
+3,Leo,2020-04-09,10,USA,MALE,Ragdoll,4
+4,Milo,2017-10-18,2,CANADA,MALE,Maine Coon,10
+5,Loki,2019-07-15,9,CHINA,MALE,American Shorthair,1
+6,Bella,2025-12-22,1,FRANCE,FEMALE,Ragdoll,1
+7,Charlie,2023-02-16,7,FRANCE,MALE,Russian Blue,4
+8,Lucy,2020-03-27,5,CANADA,MALE,Maine Coon,6
+9,Nala,2021-10-10,5,USA,FEMALE,Ragdoll,3
+10,Simba,2024-02-26,10,GERMANY,FEMALE,Persian,7
+11,Max,2024-06-16,5,USA,MALE,Bengal,3
+12,Chloe,2017-02-08,0,CANADA,MALE,Abyssinian,9
+13,Sophie,2016-08-22,6,USA,MALE,Scottish Fold,5
+14,Lily,2018-12-08,3,FRANCE,MALE,Sphynx,9
+15,Zoe,2025-04-02,9,CHINA,MALE,American Shorthair,10
+16,Jack,2016-02-20,6,CANADA,FEMALE,Ragdoll,2
+17,Oreo,2024-04-28,1,GERMANY,MALE,Siamese,5
+18,Tiger,2024-02-03,4,CANADA,FEMALE,Oriental Shorthair,2
+19,Shadow,2022-12-12,0,USA,MALE,Turkish Angora,2
+20,Smokey,2024-05-21,7,USA,FEMALE,Sphynx,10
+21,Buddy,2019-11-25,1,USA,FEMALE,Bengal,9
+22,Jasper,2021-08-30,3,GERMANY,FEMALE,American Shorthair,4
+23,Kitty,2020-02-03,7,USA,FEMALE,Persian,5
+24,Stella,2025-05-23,9,USA,MALE,British Shorthair,8
+25,Coco,2019-09-10,5,GERMANY,MALE,Sphynx,9
+26,Pumpkin,2019-04-21,0,CANADA,MALE,Bengal,4
+27,Pepper,2021-10-10,7,CANADA,MALE,Turkish Angora,7
+28,George,2017-11-05,2,CHINA,MALE,Bengal,5
+29,Teddy,2015-07-26,3,CHINA,FEMALE,Russian Blue,5
+30,Mocha,2022-07-07,8,FRANCE,FEMALE,American Shorthair,5
+31,Willow,2017-09-30,3,USA,MALE,Sphynx,7
+32,Princess,2021-08-31,9,CHINA,MALE,Siamese,1
+33,Mittens,2019-03-09,1,FRANCE,MALE,Sphynx,7
+34,Tigger,2018-05-28,4,USA,MALE,Oriental Shorthair,1
+35,Oscar,2022-02-01,10,USA,FEMALE,Siamese,2
+36,Ginger,2015-12-22,5,CANADA,FEMALE,Ragdoll,1
+37,Frankie,2023-12-27,10,GERMANY,FEMALE,Oriental Shorthair,7
+38,Penny,2019-09-29,10,GERMANY,FEMALE,Russian Blue,2
+39,Harley,2015-02-12,8,FRANCE,MALE,British Shorthair,4
+40,Hazel,2020-04-06,7,GERMANY,MALE,Scottish Fold,10
+41,Cleo,2024-07-01,1,CANADA,FEMALE,Sphynx,10
+42,Athena,2017-10-03,10,USA,MALE,Persian,8
+43,Missy,2023-02-10,3,USA,MALE,Maine Coon,10
+44,Mochi,2024-12-03,5,USA,MALE,Scottish Fold,7
+45,Phoebe,2020-12-21,8,USA,MALE,Ragdoll,7
+46,Kiki,2018-03-11,5,USA,MALE,Maine Coon,9
+47,Roxy,2024-07-20,10,FRANCE,MALE,Siamese,7
+48,Pearl,2017-05-02,3,CHINA,FEMALE,American Shorthair,5
+49,Dusty,2022-03-27,8,GERMANY,FEMALE,Turkish Angora,5
+50,Boo,2020-01-11,6,GERMANY,MALE,Siamese,1
+51,Poppy,2021-04-29,9,FRANCE,FEMALE,Ragdoll,2
+52,Sunny,2025-10-28,6,CHINA,MALE,Scottish Fold,4
+53,Ranger,2021-10-21,1,FRANCE,MALE,British Shorthair,9
+54,Nova,2015-07-04,8,FRANCE,FEMALE,Siamese,9
+55,Marble,2024-10-09,9,CHINA,MALE,Scottish Fold,9
+56,Goose,2025-05-08,4,FRANCE,FEMALE,Maine Coon,7
+57,Toffee,2015-04-09,2,GERMANY,MALE,Maine Coon,4
+58,Winnie,2022-04-18,3,USA,FEMALE,Exotic Shorthair,1
+59,Basil,2024-02-02,8,FRANCE,FEMALE,Maine Coon,1
+60,Fig,2018-04-09,3,FRANCE,FEMALE,American Shorthair,1
+61,Sushi,2022-11-04,7,USA,FEMALE,Bengal,5
+62,Maple,2022-11-12,4,FRANCE,MALE,Persian,1
+63,Cricket,2022-06-25,9,USA,FEMALE,Bengal,9
+64,Domino,2023-07-13,6,CHINA,FEMALE,Bengal,6
+65,Stormy,2019-12-27,9,USA,MALE,Russian Blue,2
+66,Indy,2023-09-21,8,CANADA,FEMALE,Abyssinian,10
+67,Beans,2020-11-19,10,CHINA,MALE,British Shorthair,8
+68,Mango,2018-08-23,1,CHINA,MALE,Bengal,8
+69,Blue,2022-10-09,4,CHINA,MALE,Bengal,2
+70,Cookie,2022-09-23,9,USA,MALE,Russian Blue,5
+71,Nori,2023-08-22,3,CANADA,MALE,Maine Coon,9
+72,Fiona,2018-12-12,2,USA,FEMALE,Maine Coon,4
+73,Sprinkles,2018-01-24,10,CHINA,FEMALE,Ragdoll,1
+74,Echo,2018-01-02,0,CHINA,FEMALE,American Shorthair,2
+75,Fudge,2025-11-07,2,FRANCE,FEMALE,American Shorthair,5
+76,Moose,2020-06-15,7,FRANCE,FEMALE,Exotic Shorthair,8
+77,Buttons,2017-06-12,6,USA,FEMALE,Exotic Shorthair,10
+78,Ziggy,2015-03-20,8,CHINA,MALE,Sphynx,6
+79,Miso,2017-08-01,6,USA,FEMALE,British Shorthair,10
+80,Tuna,2017-10-15,7,USA,FEMALE,Scottish Fold,10
+81,Olive,2019-10-13,10,USA,MALE,Maine Coon,5
+82,Cosmo,2016-09-23,1,USA,MALE,Sphynx,1
+83,Comet,2022-07-23,6,CHINA,FEMALE,Sphynx,8
+84,Nebula,2023-04-29,9,USA,FEMALE,Persian,2
+85,Pixel,2019-03-05,4,CANADA,FEMALE,Bengal,10
+86,Widget,2021-10-01,7,USA,MALE,British Shorthair,1
+87,Velvet,2020-01-06,6,CANADA,FEMALE,Abyssinian,8
+88,Licorice,2024-06-09,8,USA,FEMALE,Bengal,1
+89,Sable,2021-07-09,5,FRANCE,FEMALE,Exotic Shorthair,4
+90,Frost,2020-09-28,4,GERMANY,FEMALE,Persian,3
+91,Ash,2024-11-03,8,GERMANY,MALE,Ragdoll,7
+92,Ember,2025-05-29,9,CANADA,MALE,Siamese,1
+93,Cinder,2015-08-03,0,USA,FEMALE,British Shorthair,2
+94,Pebbles,2020-12-02,10,CHINA,FEMALE,Siamese,1
+95,Freya,2025-05-22,1,GERMANY,MALE,Norwegian Forest Cat,7
+96,Thor,2021-06-29,4,USA,FEMALE,Bengal,8
+97,Zeus,2018-01-10,5,CANADA,MALE,American Shorthair,1
+98,Hermes,2019-05-01,0,CHINA,MALE,Abyssinian,10
+99,Apollo,2023-11-03,4,USA,MALE,Siamese,5
+100,Artemis,2025-11-25,9,USA,MALE,Russian Blue,9
+101,Hera,2015-04-20,3,CANADA,FEMALE,Oriental Shorthair,9
+102,Cinnamon,2021-01-20,2,USA,MALE,Bengal,6
+103,Nutmeg,2018-08-20,3,USA,MALE,Siamese,8
+104,Clove,2024-09-28,3,CANADA,FEMALE,Scottish Fold,6
+105,Paprika,2025-11-05,8,CHINA,FEMALE,Oriental Shorthair,4
+106,Chai,2017-01-17,4,CANADA,FEMALE,Persian,4
+107,Latte,2023-09-04,0,CANADA,FEMALE,British Shorthair,8
+108,Espresso,2020-09-04,10,FRANCE,MALE,British Shorthair,5
+109,Cappuccino,2020-12-15,4,CHINA,MALE,Siamese,2
+110,Truffle,2022-12-29,0,USA,MALE,Persian,5
+111,Biscuit,2024-06-08,3,USA,MALE,Maine Coon,8
+112,Waffles,2025-01-05,4,USA,MALE,Oriental Shorthair,1
+113,Pancake,2017-09-21,6,FRANCE,MALE,Siamese,7
+114,Marmalade,2021-03-29,4,USA,MALE,Bengal,1
+115,Honey,2021-01-08,4,CHINA,MALE,Bengal,6
+116,Caramel,2023-04-24,6,FRANCE,MALE,Abyssinian,3
+117,Butterscotch,2022-03-09,2,FRANCE,MALE,Exotic Shorthair,5
+118,Cupcake,2025-12-04,6,FRANCE,MALE,Bengal,4
+119,Brownie,2018-03-19,1,CANADA,MALE,Bengal,10
+120,Pudding,2019-10-24,5,CHINA,FEMALE,Russian Blue,2

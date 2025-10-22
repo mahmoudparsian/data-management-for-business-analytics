@@ -1,0 +1,13 @@
+dept_id,dept_name,location
+10,Engineering,New York
+20,Sales,Chicago
+30,Marketing,San Francisco
+40,HR,Austin
+50,Finance,Boston
+60,Operations,Seattle
+70,Customer Success,Denver
+80,IT Support,Atlanta
+90,Legal,Washington DC
+100,R&D Strategy,Palo Alto
+200,Sport,Sunnyvale
+300,AI,Stanford

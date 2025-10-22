@@ -1,0 +1,10 @@
+Show the total cost for each order
+Show the customer name for the orders
+Show the total amount spent by each customer
+Show how many customers per country
+Show the total sales by country
+Show the total sales by employee
+Show how many products were sold for each product
+Show the total sales by product
+Show how many products were sold for each category
+Show the total sales by category

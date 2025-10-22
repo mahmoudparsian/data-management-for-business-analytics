@@ -1,0 +1,303 @@
+dataset_small (main) % pwd
+/Users/max/mp/dominican_university/SAMPLE_Databases/mysql_sample_databases/employee-sample-database/mysql/dataset_small
+
+dataset_small (main) % ls -l
+total 1200
+-rw-r--r--@ 1 max  staff    4100 Sep 17 22:54 employee.sql
+-rw-r--r--@ 1 max  staff     249 Sep 17 22:54 load_department.sql
+-rw-r--r--@ 1 max  staff   46355 Sep 17 22:54 load_dept_emp.sql
+-rw-r--r--@ 1 max  staff     721 Sep 17 22:54 load_dept_manager.sql
+-rw-r--r--@ 1 max  staff   58535 Sep 17 22:54 load_employee.sql
+-rw-r--r--@ 1 max  staff  389315 Sep 17 22:54 load_salary1.sql
+-rw-r--r--@ 1 max  staff   71020 Sep 17 22:54 load_title.sql
+-rw-r--r--@ 1 max  staff    4548 Sep 17 22:54 object.sql
+-rw-r--r--@ 1 max  staff     267 Sep 17 22:54 show_elapsed.sql
+-rw-r--r--@ 1 max  staff    4198 Sep 17 22:54 test_employee_md5.sql
+
+dataset_small (main) % mysql -h localhost -u root -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 11
+Server version: 9.2.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2025, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| company            |
+| homeworks          |
+| information_schema |
+| movies             |
+| mysql              |
+| performance_schema |
+| sys                |
+| test_db            |
+| world              |
++--------------------+
+9 rows in set (0.00 sec)
+
+mysql> source employee.sql;
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 1 row affected (0.00 sec)
+
+Database changed
++-----------------------------+
+| INFO                        |
++-----------------------------+
+| CREATING DATABASE STRUCTURE |
++-----------------------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected, 6 warnings (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++------------------------+
+| INFO                   |
++------------------------+
+| storage engine: InnoDB |
++------------------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
++--------------------+
+| INFO               |
++--------------------+
+| LOADING department |
++--------------------+
+1 row in set (0.00 sec)
+
+Query OK, 9 rows affected (0.00 sec)
+Records: 9  Duplicates: 0  Warnings: 0
+
++------------------+
+| INFO             |
++------------------+
+| LOADING employee |
++------------------+
+1 row in set (0.00 sec)
+
+Query OK, 1000 rows affected (0.01 sec)
+Records: 1000  Duplicates: 0  Warnings: 0
+
++------------------+
+| INFO             |
++------------------+
+| LOADING dept_emp |
++------------------+
+1 row in set (0.00 sec)
+
+Query OK, 1103 rows affected (0.01 sec)
+Records: 1103  Duplicates: 0  Warnings: 0
+
++----------------------+
+| INFO                 |
++----------------------+
+| LOADING dept_manager |
++----------------------+
+1 row in set (0.00 sec)
+
+Query OK, 16 rows affected (0.00 sec)
+Records: 16  Duplicates: 0  Warnings: 0
+
++---------------+
+| INFO          |
++---------------+
+| LOADING title |
++---------------+
+1 row in set (0.00 sec)
+
+Query OK, 1470 rows affected (0.01 sec)
+Records: 1470  Duplicates: 0  Warnings: 0
+
++----------------+
+| INFO           |
++----------------+
+| LOADING salary |
++----------------+
+1 row in set (0.00 sec)
+
+Query OK, 9488 rows affected (0.04 sec)
+Records: 9488  Duplicates: 0  Warnings: 0
+
++---------------------+
+| data_load_time_diff |
++---------------------+
+| 00:00:00            |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| company            |
+| employee           |
+| homeworks          |
+| information_schema |
+| movies             |
+| mysql              |
+| performance_schema |
+| sys                |
+| test_db            |
+| world              |
++--------------------+
+10 rows in set (0.00 sec)
+
+mysql> use employee;
+Database changed
+mysql> show tables;
++----------------------+
+| Tables_in_employee   |
++----------------------+
+| current_dept_emp     |
+| department           |
+| dept_emp             |
+| dept_emp_latest_date |
+| dept_manager         |
+| employee             |
+| salary               |
+| title                |
++----------------------+
+8 rows in set (0.01 sec)
+
+mysql> select count(*) from current_dept_emp;
++----------+
+| count(*) |
++----------+
+|     1000 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) from department;
++----------+
+| count(*) |
++----------+
+|        9 |
++----------+
+1 row in set (0.01 sec)
+
+mysql> select count(*) from dept_emp;
++----------+
+| count(*) |
++----------+
+|     1103 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) from dept_emp_latest_date;
++----------+
+| count(*) |
++----------+
+|     1000 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) from dept_manager;
++----------+
+| count(*) |
++----------+
+|       16 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) from employee;
++----------+
+| count(*) |
++----------+
+|     1000 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) from salary;
++----------+
+| count(*) |
++----------+
+|     9488 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) from title;
++----------+
+| count(*) |
++----------+
+|     1470 |
++----------+
+1 row in set (0.01 sec)
+
+mysql> exit
+
