@@ -16,9 +16,14 @@
 - **Definition**: One record in Table A relates to exactly one record in Table B.  
 - Used when we want to **separate optional or sensitive information**.  
 
-**Example**:  
+**Example-1**:  
 - Table A: Students (basic info)  
-- Table B: Student Profiles (DOB, SSN)  
+- Table B: Student Profiles (DOB, SSN) 
+
+**Example-2**:
+
+![](./images/1-to-1.png) 
+
 
 ---
 
@@ -58,8 +63,14 @@ JOIN student_profiles p ON s.student_id = p.student_id;
 - **Definition**: One record in Table A relates to many records in Table B.  
 - Common when one entity can manage multiple dependent entities.  
 
-**Example**:  
+**Example-1**:  
+
 - One **Professor** teaches many **Courses**.
+
+**Example-2**:  
+
+![](./images/1-to-MANY.webp)
+
 
 ---
 
@@ -98,8 +109,13 @@ JOIN courses c ON p.professor_id = c.professor_id;
 - **Definition**: Records in Table A relate to many records in Table B and vice versa.  
 - Implemented using a **junction/bridge table**.  
 
-**Example**:  
+**Example-1**:  
+
 - Students ↔ Enrollments ↔ Courses  
+
+**Example-2**:
+
+![](./images/MANY-to-MANY.png)
 
 ---
 
