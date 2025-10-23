@@ -7,6 +7,14 @@
 	   used  to  teach  the basics  of relational 
 	   database systems, structures, and database 
 	   queries by using SQL.
+	   
+	   Data engineers build and design relational 
+	   databases (+other data management systems) 
+	   to  assist  organizations  in  collecting, 
+	   storing,  and analyzing  data.  Then, data 
+	   analysts and  data scientists use them  to 
+	   digest large amounts  of data and identify 
+	   meaningful insights.
 
 ------
 
