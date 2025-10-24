@@ -1,12 +1,16 @@
 # Payments + Shipments Lab (Customer–Order Extension)
 
 ## 📖 Data Story
-Your company now wants to **track how customers pay for their orders** and **how those orders are shipped**.
+
+Your company now wants to **track how customers pay for their orders** 
+and **how those orders are shipped**.
 
 - **Payments:** Each order has exactly one payment (one-to-one).  
 - **Shipments:** Each order may have one or more shipments (one-to-many).  
 
-This models the **end-to-end lifecycle of an order**: from placement → payment → shipping → delivery.
+This models the **end-to-end lifecycle of an order**: 
+
+from placement → payment → shipping → delivery.
 
 ---
 
@@ -204,12 +208,9 @@ INSERT INTO shipments VALUES
 
 ✅ End of Lab
 
+-----
 
-
-
-
-===========
-Can you extend the SQL INSERT as:
+## Extend the SQL INSERT as:
 
 ### Customers (22 rows): 2 OF THEM NEVER BUY ANYTHING
 
