@@ -92,42 +92,8 @@ CREATE TABLE enrollments (
 
 ## 📥 Sample INSERT Statements
 
-```sql
-INSERT INTO students VALUES
-(1, 'Alice Johnson', 'alice@example.com'),
-(2, 'Bob Smith', 'bob@example.com'),
-(3, 'Charlie Lee', 'charlie@example.com');
-```
+see file `sample_rows.sql`
 
-```sql
-INSERT INTO dorms VALUES
-(1, 'A101', 1),
-(2, 'B202', 2),
-(3, 'C303', 3);
-```
-
-```sql
-INSERT INTO professors VALUES
-(1, 'Dr. Green', 'Mathematics'),
-(2, 'Dr. Blue', 'Computer Science');
-```
-
-```sql
-INSERT INTO courses VALUES
-(1, 'Calculus I', 1),
-(2, 'Linear Algebra', 1),
-(3, 'Intro to Programming', 2),
-(4, 'Data Structures', 2);
-```
-
-```sql
-INSERT INTO enrollments VALUES
-(1, 1),
-(1, 3),
-(2, 2),
-(2, 3),
-(3, 4);
-```
 
 ------
 
