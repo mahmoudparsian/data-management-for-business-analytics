@@ -203,3 +203,22 @@ INSERT INTO shipments VALUES
 ---
 
 ✅ End of Lab
+
+
+
+
+
+===========
+Can you extend the SQL INSERT as:
+
+### Customers (22 rows): 2 OF THEM NEVER BUY ANYTHING
+
+### Products (54 rows): 4 of the products never bougut
+
+### Orders (300 rows): do not even among customers
+
+### Payments (50 rows)
+
+### Shipments (80 rows)
+
+
