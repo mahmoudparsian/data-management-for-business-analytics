@@ -1,4 +1,4 @@
-Age,Race ,Marital Status,,T Stage ,N Stage,6th Stage,Grade,A Stage,Tumor Size,Estrogen Status,Progesterone Status,Regional Node Examined,Reginol Node Positive,Survival Months,Status
+age,race,marital_status,x,t_stage,n_stage,sixth_6_stage,grade,a_stage,tumor_size,estrogen_status,progesterone_status,regional_node_examined,reginol_node_positive,survival_months,status
 43,"Other (American Indian/AK Native, Asian/Pacific Islander)",Married (including common law),,T2,N3,IIIC,Moderately differentiated; Grade II,Regional,40,Positive,Positive,19,11,1,Alive
 47,"Other (American Indian/AK Native, Asian/Pacific Islander)",Married (including common law),,T2,N2,IIIA,Moderately differentiated; Grade II,Regional,45,Positive,Positive,25,9,2,Alive
 67,White,Married (including common law),,T2,N1,IIB,Poorly differentiated; Grade III,Regional,25,Positive,Positive,4,1,2,Dead
