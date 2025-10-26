@@ -1,0 +1,100 @@
+import pandas as pd
+import mysql.connector
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# -----------------------------
+# Connect to MySQL
+# -----------------------------
+conn = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="password",
+    database="world"
+)
+
+# Load employees table
+df = pd.read_sql("SELECT * FROM employees", conn)
+conn.close()
+
+print("Shape:", df.shape)
+print("Columns:", df.columns.tolist())
+
+# -----------------------------
+# 1. Avg salary per department
+# -----------------------------
+dept_avg = df.groupby("department")["salary"].mean().sort_values()
+plt.figure(figsize=(8,5))
+sns.barplot(x=dept_avg.values, y=dept_avg.index, palette="viridis")
+plt.title("Average Salary per Department")
+plt.xlabel("Average Salary")
+plt.ylabel("Department")
+plt.show()
+
+# -----------------------------
+# 2. Avg salary per country
+# -----------------------------
+country_avg = df.groupby("country")["salary"].mean().sort_values()
+plt.figure(figsize=(8,5))
+sns.barplot(x=country_avg.values, y=country_avg.index, palette="coolwarm")
+plt.title("Average Salary per Country")
+plt.xlabel("Average Salary")
+plt.ylabel("Country")
+plt.show()
+
+# -----------------------------
+# 3. Employee count per department
+# -----------------------------
+dept_count = df["department"].value_counts()
+plt.figure(figsize=(8,5))
+sns.barplot(x=dept_count.values, y=dept_count.index, palette="Set2")
+plt.title("Employee Count per Department")
+plt.xlabel("Number of Employees")
+plt.ylabel("Department")
+plt.show()
+
+# -----------------------------
+# 4. Employee count per country
+# -----------------------------
+country_count = df["country"].value_counts()
+plt.figure(figsize=(8,5))
+sns.barplot(x=country_count.values, y=country_count.index, palette="Set3")
+plt.title("Employee Count per Country")
+plt.xlabel("Number of Employees")
+plt.ylabel("Country")
+plt.show()
+
+# -----------------------------
+# 5. Avg age per department
+# -----------------------------
+dept_age = df.groupby("department")["age"].mean().sort_values()
+plt.figure(figsize=(8,5))
+sns.barplot(x=dept_age.values, y=dept_age.index, palette="mako")
+plt.title("Average Age per Department")
+plt.xlabel("Average Age")
+plt.ylabel("Department")
+plt.show()
+
+# -----------------------------
+# 6. Avg salary by position
+# -----------------------------
+pos_avg = df.groupby("position")["salary"].mean().sort_values()
+plt.figure(figsize=(8,5))
+sns.barplot(x=pos_avg.values, y=pos_avg.index, palette="Spectral")
+plt.title("Average Salary per Position")
+plt.xlabel("Average Salary")
+plt.ylabel("Position")
+plt.show()
+
+# -----------------------------
+# 7. Employee count by join year
+# -----------------------------
+df["join_year"] = pd.to_datetime(df["joined_date"]).dt.year
+year_count = df["join_year"].value_counts().sort_index()
+plt.figure(figsize=(8,5))
+sns.lineplot(x=year_count.index, y=year_count.values, marker="o")
+plt.title("Employees Joined per Year")
+plt.xlabel("Year")
+plt.ylabel("Number of Employees")
+plt.grid(True)
+plt.show()

@@ -1,0 +1,80 @@
+import pandas as pd
+import sqlite3
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Load CSV into SQLite
+df = pd.read_csv("SEER_Breast_Cancer_Dataset.csv")
+
+conn = sqlite3.connect(":memory:")
+df.to_sql("seer_breast_cancer", conn, if_exists="replace", index=False)
+
+# Query 1: Alive vs Dead by Race
+query1 = """
+SELECT Race, Status, COUNT(*) as count
+FROM seer_breast_cancer
+GROUP BY Race, Status;
+"""
+df1 = pd.read_sql(query1, conn)
+plt.figure(figsize=(10,6))
+sns.barplot(x="Race", y="count", hue="Status", data=df1)
+plt.xticks(rotation=45)
+plt.title("Alive vs Dead by Race")
+plt.tight_layout()
+plt.savefig("alive_dead_by_race.png")
+plt.close()
+
+# Query 2: Avg Tumor Size by Grade
+query2 = """
+SELECT Grade, AVG(`Tumor Size`) as avg_tumor
+FROM seer_breast_cancer
+GROUP BY Grade
+ORDER BY avg_tumor DESC;
+"""
+df2 = pd.read_sql(query2, conn)
+plt.figure(figsize=(8,5))
+sns.barplot(x="avg_tumor", y="Grade", data=df2, palette="viridis")
+plt.title("Average Tumor Size by Grade")
+plt.tight_layout()
+plt.savefig("avg_tumor_by_grade.png")
+plt.close()
+
+# Query 3: Avg Survival Months by Marital Status
+query3 = """
+SELECT `Marital Status`, AVG(`Survival Months`) as avg_survival
+FROM seer_breast_cancer
+GROUP BY `Marital Status`
+ORDER BY avg_survival DESC;
+"""
+df3 = pd.read_sql(query3, conn)
+plt.figure(figsize=(8,5))
+sns.barplot(x="avg_survival", y="Marital Status", data=df3, palette="coolwarm")
+plt.title("Average Survival Months by Marital Status")
+plt.tight_layout()
+plt.savefig("avg_survival_by_marital_status.png")
+plt.close()
+
+# Query 4: Ranking Tumor Size by Grade
+query4 = """
+SELECT Age, Grade, `Tumor Size`,
+       RANK() OVER (PARTITION BY Grade ORDER BY `Tumor Size` DESC) as rnk
+FROM seer_breast_cancer;
+"""
+df4 = pd.read_sql(query4, conn)
+top_ranked = df4[df4["rnk"] <= 3]
+print("Top 3 Patients per Grade by Tumor Size:")
+print(top_ranked.head(20))
+
+# Query 5: Top 3 Patients per Race by Survival Months
+query5 = """
+SELECT Age, Race, `Survival Months`,
+       RANK() OVER (PARTITION BY Race ORDER BY `Survival Months` DESC) as rnk
+FROM seer_breast_cancer;
+"""
+df5 = pd.read_sql(query5, conn)
+top_race = df5[df5["rnk"] <= 3]
+print("Top 3 Patients per Race by Survival Months:")
+print(top_race.head(20))
+
+conn.close()
+print("Exploration complete. Images saved as PNGs.")
