@@ -50,8 +50,45 @@
 		information from different tables. 
 
 ![](./web_docs/relational_database_tables.png)
+
 ![](./web_docs/relational_database_tables2.png)
+
 -----
+
+## Data storytelling
+
+		Data storytelling is the practice  of combining 
+		data, visuals,  and a  narrative to communicate 
+		insights  in  a  clear  and compelling way.  It 
+		goes beyond simply presenting numbers or charts 
+		to help an audience understand the "why" behind 
+		the  data,  enabling   them  to  grasp  complex 
+		information, make decisions, and even take action.  
+		
+![](./web_docs/data_story.png)
+
+### Key elements:
+
+##### Data: 
+		The foundation  of the story, providing 
+		the  factual  basis for the  narrative. 
+		This includes various data points, from 
+		raw numbers to complex datasets. 
+
+##### Visuals: 
+		Charts,  graphs, infographics,  and  other 
+		visual  elements  are  used  to  represent 
+		the data in an engaging and understandable 
+		format. 
+
+##### Narrative: 
+		A compelling storyline that provides context, 
+		connects  the  data  points,  and  guides the 
+		audience  through the  information, typically 
+		including an introduction, a main  point, and 
+		a conclusion or call to action. 
+
+------
 
 ## Data Visualization
 
