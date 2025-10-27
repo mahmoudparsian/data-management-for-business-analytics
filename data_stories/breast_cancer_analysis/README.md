@@ -2,6 +2,9 @@
 
 ### Abstract
 
+source: [SEER Breast Cancer Data](https://ieee-dataport.org/open-access/seer-breast-cancer-data)
+
+
 		This dataset of breast cancer patients was obtained 
 		from the 2017 November update of the SEER Program of 
 		the NCI, which provides information on population-based 
@@ -13,7 +16,6 @@
 		whose survival months were less than 1 month were excluded; 
 		thus, 4024 patients were ultimately included.
 
-source: [SEER Breast Cancer Data](https://ieee-dataport.org/open-access/seer-breast-cancer-data)
 
 ------
 
