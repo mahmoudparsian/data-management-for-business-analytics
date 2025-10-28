@@ -84,6 +84,36 @@ VALUES
 SELECT * 
 FROM employees;
 
+SELECT emp_id, first_name, last_name, department, salary
+FROM employees;
+
+-- get all columns, but only 2 rows
+SELECT emp_id, first_name, last_name, department, salary
+FROM employees
+LIMIT 2;
+
+-- get 2 highest-paid  employees
+SELECT emp_id, first_name, last_name, department, salary
+FROM employees
+ORDER BY salary DESC
+LIMIT 2;
+
+RESULT:
+(1, 'Alice', 'Johnson', 'Engineering', 95000)
+(3, 'Carol', 'Davis', 'Marketing', 78000)
+
+-- get 2 lowest-paid  employees
+SELECT emp_id, first_name, last_name, department, salary
+FROM employees
+ORDER BY salary ASC
+LIMIT 2;
+
+RESULT:
+(2, 'Bob', 'Smith', 'Finance', 70000),
+(3, 'Carol', 'Davis', 'Marketing', 78000),
+
+
+
 -- Show only names and salaries
 SELECT first_name, last_name, salary 
 FROM employees;
@@ -107,6 +137,32 @@ WHERE salary > 80000;
 SELECT * 
 FROM employees 
 WHERE department = 'Finance';
+```
+
+#### Query-3: Employees with `salary > 80000` who work in Engineering department
+
+```sql
+SELECT * 
+FROM employees 
+WHERE salary > 80000 AND department = 'Engineering';
+```
+
+OR
+
+```sql
+SELECT * 
+FROM employees 
+WHERE (salary > 80000) AND (department = 'Engineering');
+```
+
+```
+Boolean : TRUE and FALSE
+
+A      B    (A AND B)   (A OR B)
+TRUE   TRUE    TRUE       TRUE
+TRUE   FALSE   FALSE      TRUE
+FALSE  TRUE    FALSE      TRUE
+FALSE  FALSE   FALSE      FALSE
 ```
 
 ---
