@@ -326,3 +326,13 @@ GROUP BY country, department;
 +---------+-------------+------------------+
 8 rows in set (0.001 sec)
 ```
+
+## References & Tutorials
+
+[1. SQL GROUP BY -- www.sqltutorial.org](https://www.sqltutorial.org/sql-group-by)
+
+[2. SQL GROUP BY](https://www.programiz.com/sql/group-by)
+
+[3. MySQL GROUP BY Statement](https://www.w3schools.com/mysql/mysql_groupby.asp)
+
+[4. SQL - Group By Clause by Examples](https://www.tutorialspoint.com/sql/sql-group-by.htm) 
