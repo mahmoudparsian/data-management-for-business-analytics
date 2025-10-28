@@ -26,7 +26,8 @@
 Example:
 
 ```sql
-	SELECT customer_id, SUM(amount) AS total_spent
+	SELECT customer_id,
+           SUM(amount) AS total_spent
 	FROM orders
 	GROUP BY customer_id;
 ```
