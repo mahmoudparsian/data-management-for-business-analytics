@@ -25,7 +25,7 @@
 CREATE TABLE sales (
   id INT,
   product VARCHAR(20),
-  amount DECIMAL(10,2)
+  amount DECIMAL(10, 2)
 );
 
 INSERT INTO sales VALUES
@@ -40,13 +40,18 @@ INSERT INTO sales VALUES
 📊 sales table
 
 ~~~
-id   product    amount
-1    Book       50.00
-2    Pen         5.00
-3    Book       30.00
-4    Bag        70.00
-5    Pen         8.00
-6    Book       NULL
+mysql> select * from sales;
++------+---------+--------+
+| id   | product | amount |
++------+---------+--------+
+|    1 | Book    |  50.00 |
+|    2 | Pen     |   5.00 |
+|    3 | Book    |  30.00 |
+|    4 | Bag     |  70.00 |
+|    5 | Pen     |   8.00 |
+|    6 | Book    |   NULL |
++------+---------+--------+
+6 rows in set (0.001 sec)
 ~~~
 
 ⸻
@@ -56,10 +61,24 @@ id   product    amount
 * -- Average
 
 ~~~sql
-SELECT AVG(amount) 
-FROM sales;
+mysql> SELECT AVG(amount)
+    -> FROM sales;
++-------------+
+| AVG(amount) |
++-------------+
+|   32.600000 |
++-------------+
+1 row in set (0.001 sec)
 
-→ 40.75  (NULL ignored)
+mysql> select (50.00+5.00+30.00+70.00+8.00)/5.0;
++-----------------------------------+
+| (50.00+5.00+30.00+70.00+8.00)/5.0 |
++-----------------------------------+
+|                         32.600000 |
++-----------------------------------+
+1 row in set (0.000 sec)
+
+(NULL ignored)
 ~~~
 
 * -- Minimum
@@ -125,12 +144,22 @@ GROUP BY product;
 
 ✅ Results:
 
-~~~
-product  num_sales   avg_amount    total_amount
-Book     2            40.00        80.00
-Pen      2             6.50        13.00
-Bag      1            70.00        70.00
-
+```sql
+mysql> SELECT product,
+    ->        COUNT(amount) AS num_sales,
+    ->        AVG(amount)   AS avg_amount,
+    ->        SUM(amount)   AS total_amount
+    -> FROM sales
+    -> GROUP BY product;
++---------+-----------+------------+--------------+
+| product | num_sales | avg_amount | total_amount |
++---------+-----------+------------+--------------+
+| Book    |         2 |  40.000000 |        80.00 |
+| Pen     |         2 |   6.500000 |        13.00 |
+| Bag     |         1 |  70.000000 |        70.00 |
++---------+-----------+------------+--------------+
+3 rows in set (0.001 sec)
+```
 
 ⸻
 
@@ -156,8 +185,17 @@ FROM sales;
 ✅ Output:
 
 ~~~
-total_rows  non_null_rows    total_amount    avg_amount
-6           5                163.00          40.75
+mysql> SELECT COUNT(*) AS total_rows,
+    ->        COUNT(amount) AS non_null_rows,
+    ->        SUM(amount) AS total_amount,
+    ->        AVG(amount) AS avg_amount
+    -> FROM sales;
++------------+---------------+--------------+------------+
+| total_rows | non_null_rows | total_amount | avg_amount |
++------------+---------------+--------------+------------+
+|          6 |             5 |       163.00 |  32.600000 |
++------------+---------------+--------------+------------+
+1 row in set (0.001 sec)
 ~~~
 
 👉 Notice:
@@ -246,9 +284,13 @@ HAVING SUM(amount) > 50;
 ✅ Output:
 
 ~~~
-product    total_sales
-Book       100.00
-Bag         70.00
++---------+-------------+
+| product | total_sales |
++---------+-------------+
+| Book    |       80.00 |
+| Bag     |       70.00 |
++---------+-------------+
+2 rows in set (0.001 sec)
 ~~~
 
 ⸻
@@ -272,8 +314,32 @@ HAVING AVG(amount) > 30;
 ✅ Output:
 
 ~~~
-product    avg_amount
-Book       33.33
++---------+------------+
+| product | avg_amount |
++---------+------------+
+| Book    |  40.000000 |
+| Bag     |  70.000000 |
++---------+------------+
+2 rows in set (0.001 sec)
+~~~
+
+Re-write SQL Query:
+
+~~~sql
+SELECT product,
+       AVG(amount) AS avg_amount
+FROM sales
+WHERE amount > 10
+GROUP BY product
+HAVING avg_amount > 30;
+
++---------+------------+
+| product | avg_amount |
++---------+------------+
+| Book    |  40.000000 |
+| Bag     |  70.000000 |
++---------+------------+
+2 rows in set (0.001 sec)
 ~~~
 
 ⸻

@@ -47,37 +47,172 @@ Now you're ready to organize the papers inside.
 
 ### employees Table: 7 rows x 4 columns
 
+#### employees Table:
+
 **Columns are**: { `emp_id`, `emp_name`, `dept_id`, `salary` }
 
+```sql
+CREATE TABLE employees(
+  emp_id     INT Primary Key, 
+  emp_name   VARCHAR(40), 
+  dept_id    VARCHAR(10), 
+  salary     INT
+);
+```
 
-| `emp_id` | `emp_name` | `dept_id` | `salary` |
-| --- | --- | --- | ----|
-| 900 | Tracy Martinez | NULL| 95000 |
-| 100 | Alex Taylor | DEPT300 | 65000 |
-| 400 | Bob Federer | DEPT700 | 76000 |
-| 300 | Jane Austin | DEPT300 | 68000 |
-| 700 | Rafa Nadal | DEPT100 | 86000 |
-| 800 | Carlos Alcaraz | DEPT100 | 98000 |
-| 200 | Max Jobrani | DEPT300 | 65000 |
+| `emp_id` | `emp_name`     | `dept_id` | `salary`|
+| -------- | -------------- | --------- | --------|
+| 900      | Tracy Martinez | DEPT300   | NULL    |
+| 100      | Alex Taylor    | DEPT300   | 65000   |
+| 400      | Bob Federer    | DEPT700   | 76000   |
+| 300      | Jane Austin    | DEPT300   | 68000   |
+| 700      | Rafa Nadal     | DEPT100   | 86000   |
+| 800      | Carlos Alcaraz | DEPT100   | 98000   |
+| 200      | Max Jobrani    | DEPT300   | 65000   |
 
 * ✅ NOTE-1: NULL means a "missing" (undefined) value.
 * ✅  NOTE-2: NULL is NOT a zero (0)
 * ✅  NOTE-3: NULL is NOT an empty string of length 0
 
+
+#### Populate employees Table:
+
+```sql
+INSERT INTO employees(emp_id, emp_name, dept_id, salary) 
+VALUES
+(900,  'Tracy Martinez', 'DEPT300',  NULL),
+(100,  'Alex Taylor',    'DEPT300',  65000),
+(400,  'Bob Federer',    'DEPT700',  76000),
+(300,  'Jane Austin',    'DEPT300',  68000),
+(700,  'Rafa Nadal',     'DEPT100',  86000),
+(800,  'Carlos Alcaraz', 'DEPT100',  98000),
+(200,  'Max Jobrani',    'DEPT300',  65000);
+```
+
+
 ### departments Table: 4 rows x 2 columns
 
 **Columns are**: { `dept_id`, `dept_name` }
 
-| `dept_id` | `dept_name` | 
-| --- | --- | 
-| DEPT100 | Sports | 
-| DEPT200 | AI | 
-| DEPT300 | Human Resources | 
-| DEPT700 | Business | 
+```sql
+CREATE TABLE departments (
+  dept_id    VARCHAR(10) PRIMARY KEY, 
+  dept_name   VARCHAR(40) 
+);
+```
+
+
+| `dept_id` | `dept_name`     | 
+| --------- | --------------- | 
+| DEPT100   | Sports          | 
+| DEPT200   | AI              | 
+| DEPT300   | Human Resources | 
+| DEPT700   | Business        | 
+
+#### Populate departments Table:
+
+```sql
+INSERT INTO departments(dept_id, dept_name) 
+VALUES
+('DEPT100', 'Sports'),        
+('DEPT200', 'AI'),             
+('DEPT300', 'Human Resources'),
+('DEPT700', 'Business');
+
+```
+
 
 #### ✅ NOTE-1: `departments.dept_id` Links to `employees.dept_id`
 
 #### ✅ NOTE-2: Tables are linked by one or more COMMON columns
+
+#### Note of NULL values in SQL Queries
+
+```sql
+-- Query-1
+select count(*) 
+from employees;
++----------+
+| count(*) |
++----------+
+|        7 |
++----------+
+1 row in set (0.001 sec)
+
+-- Query-2
+select count(salary) 
+from employees;
++---------------+
+| count(salary) |
++---------------+
+|             6 |
++---------------+
+1 row in set (0.001 sec)
+
+
+-- Query-3
+select dept_id, 
+       sum(salary), 
+       count(*)
+from employees 
+group by dept_id;
++---------+-------------+----------+
+| dept_id | sum(salary) | count(*) |
++---------+-------------+----------+
+| DEPT300 |      198000 |        4 |
+| DEPT700 |       76000 |        1 |
+| DEPT100 |      184000 |        2 |
++---------+-------------+----------+
+3 rows in set (0.001 sec)
+
+-- Query-4
+select dept_id, 
+       sum(salary), 
+       count(salary) 
+from employees 
+group by dept_id;
++---------+-------------+---------------+
+| dept_id | sum(salary) | count(salary) |
++---------+-------------+---------------+
+| DEPT300 |      198000 |             3 |
+| DEPT700 |       76000 |             1 |
+| DEPT100 |      184000 |             2 |
++---------+-------------+---------------+
+3 rows in set (0.001 sec)
+
+-- Query-5
+select dept_id, 
+       sum(salary), 
+       count(salary), 
+       count(*) 
+from employees 
+group by dept_id;
++---------+-------------+---------------+----------+
+| dept_id | sum(salary) | count(salary) | count(*) |
++---------+-------------+---------------+----------+
+| DEPT300 |      198000 |             3 |        4 |
+| DEPT700 |       76000 |             1 |        1 |
+| DEPT100 |      184000 |             2 |        2 |
++---------+-------------+---------------+----------+
+3 rows in set (0.001 sec)
+
+
+-- Query-6
+select dept_id, 
+       avg(salary), 
+       count(salary), 
+       GROUP_CONCAT(salary) AS list_of_salaries
+from employees 
+group by dept_id;
++---------+-------------+---------------+----------------------+
+| dept_id | avg(salary) | count(salary) | list_of_salaries     |
++---------+-------------+---------------+----------------------+
+| DEPT100 |  92000.0000 |             2 | 86000,98000          |
+| DEPT300 |  66000.0000 |             3 | 65000,65000,68000    |
+| DEPT700 |  76000.0000 |             1 | 76000                |
++---------+-------------+---------------+----------------------+
+3 rows in set (0.001 sec)
+```
 
 -----
 

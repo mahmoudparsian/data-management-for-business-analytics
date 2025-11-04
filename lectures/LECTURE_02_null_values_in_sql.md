@@ -1,12 +1,12 @@
 # NULL value in SQL
 
-	Explain the concept of NULL values in SQL, 
-	give 3 slides with examples using MYSQL db
+	Explain the concept of NULL values in SQL. 
 
-	👍 — NULL is one of the most important (and 
-	confusing) concepts in SQL.
+	👍 — NULL is one of the most important 
+	     (and confusing) concepts in SQL.
 
 👉 These  slides cover:
+
     1.    Definition of NULL
     2.    How to test for NULL
     3.    Behavior of NULL in expressions & aggregates
@@ -17,10 +17,22 @@
 
     •    NULL means “unknown” or “missing” value.
     
-    •    It is not 0, not empty string, and not false.
+    •    It is not 0, 
+    
+    •    It is not an empty string, 
+    
+    •    It is not false/FALSE
     
     •    Any column can hold NULL if it was not given a value.
 
+
+		In SQL, NULL is a special marker used to 
+		indicate that a data value is unknown, 
+		missing, or not applicable in a particular 
+		column. It is not equivalent to zero, an empty 
+		string, or a blank space.
+	
+	
 Example
 
 ~~~sql
@@ -72,7 +84,7 @@ WHERE department IS NULL;
 SELECT name 
 FROM employees
 WHERE department IS NOT NULL;
-~~~~
+~~~
 
 ✅ Result:
     •    Alice, Charlie found in second query
@@ -81,12 +93,14 @@ WHERE department IS NOT NULL;
 
 ## 📑 Slide 3: NULL in Expressions & Aggregations
 
+```
     •    Any math or string operation with NULL → results in NULL.
     
     •    Aggregates:
     •                 COUNT(*) counts all rows (ignores NULL).
     
     •                 COUNT(column) ignores NULL values.
+```
 
 ### Example
 
@@ -97,9 +111,11 @@ FROM employees;
 ~~~
 
 ✅ Result:
+
     •    total_rows = 3
     
     •    dept_count = 2 
+    
          (because Bob’s department is NULL, not counted)
 
 ⸻
@@ -150,6 +166,7 @@ JOIN departments d
 ⸻
 
 ✅ Key Rule: Always use
+
     •    IS NULL to check for missing values
     •    IS NOT NULL for present values
 
