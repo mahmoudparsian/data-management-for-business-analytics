@@ -32,6 +32,24 @@
 		column. It is not equivalent to zero, an empty 
 		string, or a blank space.
 		
+## AVOID NULL for a Column
+
+```sql
+CREATE TABLE employees(
+   emp_id INT PRIMARY KEY,          -- by def. is NOT NULL
+   first_name VARCHAR(48) NOT NULL, -- NULL NOT Permitted
+   middle_initial   VARCHAR(7),     -- NULL is Permitted
+   last_name VARCHAR(48) NOT NULL,  -- NULL NOT Permitted
+   salary INT NOT NULL,             -- NULL NOT allowed
+   ...
+)
+
+UPDATE employees
+SET salary = 23000
+WHERE (emp_id = 10) AND
+      (salary IS NOT NULL);
+```
+		
 ## Handling in Operations:
 
 	Mathematical Operations: 
@@ -42,7 +60,8 @@
 			
 	Aggregate Functions: 
 	
-			Most aggregate functions (like SUM, AVG, COUNT) 
+			Most aggregate functions 
+			(like SUM, AVG, COUNT, MIN, MAX) 
 			typically ignore NULL values by default, only 
 			operating on the non-null values.
 	

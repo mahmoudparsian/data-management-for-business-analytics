@@ -34,7 +34,8 @@ INSERT INTO sales VALUES
 (3, 'Book', 30.00),
 (4, 'Bag', 70.00),
 (5, 'Pen', 8.00),
-(6, 'Book', NULL);
+(6, 'Book', NULL),
+(7, 'PC', 12.00);
 ~~~
 
 📊 sales table
@@ -50,8 +51,9 @@ mysql> select * from sales;
 |    4 | Bag     |  70.00 |
 |    5 | Pen     |   8.00 |
 |    6 | Book    |   NULL |
+|    7 | PC      |  12.00 |
 +------+---------+--------+
-6 rows in set (0.001 sec)
+7 rows in set (0.000 sec)
 ~~~
 
 ⸻
@@ -61,24 +63,36 @@ mysql> select * from sales;
 * -- Average
 
 ~~~sql
-mysql> SELECT AVG(amount)
-    -> FROM sales;
-+-------------+
-| AVG(amount) |
-+-------------+
-|   32.600000 |
-+-------------+
-1 row in set (0.001 sec)
-
-mysql> select (50.00+5.00+30.00+70.00+8.00)/5.0;
-+-----------------------------------+
-| (50.00+5.00+30.00+70.00+8.00)/5.0 |
-+-----------------------------------+
-|                         32.600000 |
-+-----------------------------------+
+SELECT AVG(amount) AS avg_amount
+FROM sales;
++------------+
+| avg_amount |
++------------+
+|  29.166667 |
++------------+
 1 row in set (0.000 sec)
 
+mysql> select (50.00+5.00+30.00+70.00+8.00+12.00)/6.0;
++-----------------------------------------+
+| (50.00+5.00+30.00+70.00+8.00+12.00)/6.0 |
++-----------------------------------------+
+|                               29.166667 |
++-----------------------------------------+
+1 row in set (0.000 sec)
+
+
 (NULL ignored)
+
+SELECT AVG(amount) AS avg_amount,
+       count(amount) as cnt, 
+       GROUP_CONCAT(amount) AS list_of_amout 
+FROM sales;
++------------+-----+-----------------------------------+
+| avg_amount | cnt | list_of_amout                     |
++------------+-----+-----------------------------------+
+|  29.166667 |   6 | 50.00,5.00,30.00,70.00,8.00,12.00 |
++------------+-----+-----------------------------------+
+1 row in set (0.000 sec)
 ~~~
 
 * -- Minimum
@@ -87,14 +101,26 @@ mysql> select (50.00+5.00+30.00+70.00+8.00)/5.0;
 SELECT MIN(amount) 
 FROM sales;
 
-→ 5.00
++-------------+
+| MIN(amount) |
++-------------+
+|        5.00 |
++-------------+
+1 row in set (0.000 sec)
 ~~~
 
 * -- Maximum
 
 ~~~sql
-SELECT MAX(amount) FROM sales;
-→ 70.00
+SELECT MAX(amount) 
+FROM sales;
+
++-------------+
+| MAX(amount) |
++-------------+
+|       70.00 |
++-------------+
+1 row in set (0.000 sec)
 ~~~
 
 ⸻
@@ -107,7 +133,12 @@ SELECT MAX(amount) FROM sales;
 SELECT SUM(amount) 
 FROM sales;
 
-→ 163.00
++-------------+
+| SUM(amount) |
++-------------+
+|      175.00 |
++-------------+
+1 row in set (0.000 sec)
 ~~~
 
 * -- Count all rows
@@ -116,7 +147,12 @@ FROM sales;
 SELECT COUNT(*) 
 FROM sales;
 
-→ 6
++----------+
+| COUNT(*) |
++----------+
+|        7 |
++----------+
+1 row in set (0.001 sec)
 ~~~
 
 * -- Count non-NULL values
@@ -126,7 +162,12 @@ FROM sales;
 SELECT COUNT(amount) 
 FROM sales;
 
-→ 5
++---------------+
+| COUNT(amount) |
++---------------+
+|             6 |
++---------------+
+1 row in set (0.000 sec)
 ~~~
 
 ⸻
@@ -134,6 +175,20 @@ FROM sales;
 # Slide 4: Aggregates with GROUP BY
 
 ~~~sql
+mysql> select * from sales;
++------+---------+--------+
+| id   | product | amount |
++------+---------+--------+
+|    1 | Book    |  50.00 |
+|    2 | Pen     |   5.00 |
+|    3 | Book    |  30.00 |
+|    4 | Bag     |  70.00 |
+|    5 | Pen     |   8.00 |
+|    6 | Book    |   NULL |
+|    7 | PC      |  12.00 |
++------+---------+--------+
+7 rows in set (0.000 sec)
+
 SELECT product,
        COUNT(amount) AS num_sales,
        AVG(amount)   AS avg_amount,
@@ -157,8 +212,47 @@ mysql> SELECT product,
 | Book    |         2 |  40.000000 |        80.00 |
 | Pen     |         2 |   6.500000 |        13.00 |
 | Bag     |         1 |  70.000000 |        70.00 |
+| PC      |         1 |  12.000000 |        12.00 |
 +---------+-----------+------------+--------------+
-3 rows in set (0.001 sec)
+4 rows in set (0.000 sec)
+
+
+
+SELECT product,
+       COUNT(amount)        AS num_sales,
+       ROUND(AVG(amount))   AS avg_amount_rounded,
+       SUM(amount)          AS total_amount
+FROM sales
+GROUP BY product;
+
++---------+-----------+--------------------+--------------+
+| product | num_sales | avg_amount_rounded | total_amount |
++---------+-----------+--------------------+--------------+
+| Book    |         2 |                 40 |        80.00 |
+| Pen     |         2 |                  7 |        13.00 |
+| Bag     |         1 |                 70 |        70.00 |
+| PC      |         1 |                 12 |        12.00 |
++---------+-----------+--------------------+--------------+
+4 rows in set (0.000 sec)
+
+
+SELECT product,
+       COUNT(amount)        AS num_sales,
+       ROUND(AVG(amount))   AS avg_amount_rounded,
+       SUM(amount)          AS total_amount,
+       GROUP_CONCAT(amount) AS list_of_amount
+FROM sales
+GROUP BY product;
+
++---------+-----------+--------------------+--------------+----------------+
+| product | num_sales | avg_amount_rounded | total_amount | list_of_amount |
++---------+-----------+--------------------+--------------+----------------+
+| Bag     |         1 |                 70 |        70.00 | 70.00          |
+| Book    |         2 |                 40 |        80.00 | 50.00,30.00    |
+| PC      |         1 |                 12 |        12.00 | 12.00          |
+| Pen     |         2 |                  7 |        13.00 | 5.00,8.00      |
++---------+-----------+--------------------+--------------+----------------+
+4 rows in set (0.000 sec)
 ```
 
 ⸻
