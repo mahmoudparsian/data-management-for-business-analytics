@@ -31,6 +31,20 @@
 		missing, or not applicable in a particular 
 		column. It is not equivalent to zero, an empty 
 		string, or a blank space.
+		
+## Handling in Operations:
+
+	Mathematical Operations: 
+	
+			Any mathematical operation performed 
+			with NULL will result in NULL. 
+			For example, 10 + NULL equals NULL. 
+			
+	Aggregate Functions: 
+	
+			Most aggregate functions (like SUM, AVG, COUNT) 
+			typically ignore NULL values by default, only 
+			operating on the non-null values.
 	
 	
 Example
@@ -171,3 +185,28 @@ JOIN departments d
     •    IS NOT NULL for present values
 
 ⸻
+
+## Testing for NULL: 
+
+		You cannot use standard comparison operators 
+		(=, !=, <, >) to check for NULL values.
+		
+		 Instead, you must use the  following operators:
+		           IS NULL  
+		           IS NOT NULL 
+
+**Is a column NULL?**
+
+```sql
+    SELECT column_name
+    FROM table_name
+    WHERE column_name IS NULL;
+```
+
+**Is a column NOT NULL?**
+
+```sql
+    SELECT column_name
+    FROM table_name
+    WHERE column_name IS NOT NULL;
+```
