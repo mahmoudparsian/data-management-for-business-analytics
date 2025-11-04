@@ -51,14 +51,30 @@ Now you're ready to organize the papers inside.
 
 **Columns are**: { `emp_id`, `emp_name`, `dept_id`, `salary` }
 
+* NOT enforcing a FOREIGN KEY (for `dept_id`)
+
+```sql 
+CREATE TABLE employees(
+  emp_id     INT Primary Key, 
+  emp_name   VARCHAR(40), 
+  dept_id    VARCHAR(10),
+  salary     INT
+);
+```
+
+* Enforcing a FOREIGN KEY (for `dept_id`)
+* `dept_id` must be valid department id and CAN NOT be a NULL
+
 ```sql
 CREATE TABLE employees(
   emp_id     INT Primary Key, 
   emp_name   VARCHAR(40), 
-  dept_id    VARCHAR(10), 
-  salary     INT
+  dept_id    VARCHAR(10) NOT NULL, 
+  salary     INT,
+  FOREIGN KEY (dept_id) REFERENCES departments(dept_id)
 );
 ```
+
 
 | `emp_id` | `emp_name`     | `dept_id` | `salary`|
 | -------- | -------------- | --------- | --------|
@@ -199,21 +215,57 @@ group by dept_id;
 
 -- Query-6
 select dept_id, 
-       avg(salary), 
-       count(salary), 
+       avg(salary) AS avg_salary,
+       count(*) AS total_count,
+       count(salary) AS salary_count, 
        GROUP_CONCAT(salary) AS list_of_salaries
 from employees 
 group by dept_id;
-+---------+-------------+---------------+----------------------+
-| dept_id | avg(salary) | count(salary) | list_of_salaries     |
-+---------+-------------+---------------+----------------------+
-| DEPT100 |  92000.0000 |             2 | 86000,98000          |
-| DEPT300 |  66000.0000 |             3 | 65000,65000,68000    |
-| DEPT700 |  76000.0000 |             1 | 76000                |
-+---------+-------------+---------------+----------------------+
-3 rows in set (0.001 sec)
-```
 
+mysql> select dept_id,
+    ->        avg(salary) AS avg_salary,
+    ->        count(*) AS total_count,
+    ->        count(salary) AS salary_count,
+    ->        GROUP_CONCAT(salary) AS list_of_salaries
+    -> from employees
+    -> group by dept_id;
++---------+------------+-------------+--------------+-------------------+
+| dept_id | avg_salary | total_count | salary_count | list_of_salaries  |
++---------+------------+-------------+--------------+-------------------+
+| DEPT100 | 92000.0000 |           2 |            2 | 86000,98000       |
+| DEPT300 | 66000.0000 |           4 |            3 | 65000,65000,68000 |
+| DEPT700 | 76000.0000 |           1 |            1 | 76000             |
++---------+------------+-------------+--------------+-------------------+
+3 rows in set (0.000 sec)
+
+
+
+
+-- Query-7
+select dept_id, 
+       MIN(salary) AS min_salary,
+       MAX(salary) AS max_salary,
+       count(salary) AS salary_count, 
+       GROUP_CONCAT(salary) AS list_of_salaries
+from employees 
+group by dept_id;
+
+mysql> select dept_id,
+    ->        MIN(salary) AS min_salary,
+    ->        MAX(salary) AS max_salary,
+    ->        count(salary) AS salary_count,
+    ->        GROUP_CONCAT(salary) AS list_of_salaries
+    -> from employees
+    -> group by dept_id;
++---------+------------+------------+--------------+-------------------+
+| dept_id | min_salary | max_salary | salary_count | list_of_salaries  |
++---------+------------+------------+--------------+-------------------+
+| DEPT100 |      86000 |      98000 |            2 | 86000,98000       |
+| DEPT300 |      65000 |      68000 |            3 | 65000,65000,68000 |
+| DEPT700 |      76000 |      76000 |            1 | 76000             |
++---------+------------+------------+--------------+-------------------+
+3 rows in set (0.000 sec)
+```
 -----
 
 ## Chapter 2: The Tables and The Schema
@@ -289,6 +341,14 @@ VALUES (101, 'Whiskers', 'Cat', 199.99);
 -- Insert the puppy
 INSERT INTO Pets (pet_id, name, species, price)
 VALUES (102, 'Buddy', 'Dog', 450.00);
+
+-- Insert 3 another rows:
+INSERT INTO Pets (pet_id, name, species, price)
+VALUES 
+(104, 'Pishi', 'Cat', 89.99),
+(105, 'Salt', 'Cat',  79.99),
+(109, 'Ginger', 'Dog',  59.00);
+
 ```
 
 | `pet_id` | `name` | `species` | `price` |
@@ -329,6 +389,61 @@ WHERE pet_id = 101; -- ONLY WHERE the pet_id is 101 (Whiskers)
 
 Now, if you use `SELECT * FROM Pets;`, you'll only see the 'Buddy' row.
 
+### Example on using DELETE
+
+```sql
+mysql> select * from employees;
++--------+----------------+---------+--------+
+| emp_id | emp_name       | dept_id | salary |
++--------+----------------+---------+--------+
+|    100 | Alex Taylor    | DEPT300 |  65000 |
+|    200 | Max Jobrani    | DEPT300 |  65000 |
+|    300 | Jane Austin    | DEPT300 |  68000 |
+|    400 | Bob Federer    | DEPT700 |  76000 |
+|    700 | Rafa Nadal     | DEPT100 |  86000 |
+|    800 | Carlos Alcaraz | DEPT100 |  98000 |
+|    900 | Tracy Martinez | DEPT300 |   NULL |
++--------+----------------+---------+--------+
+7 rows in set (0.000 sec)
+
+mysql> DELETE FROM employees WHERE emp_id = 100;
+Query OK, 1 row affected (0.001 sec)
+
+mysql> select * from employees;
++--------+----------------+---------+--------+
+| emp_id | emp_name       | dept_id | salary |
++--------+----------------+---------+--------+
+|    200 | Max Jobrani    | DEPT300 |  65000 |
+|    300 | Jane Austin    | DEPT300 |  68000 |
+|    400 | Bob Federer    | DEPT700 |  76000 |
+|    700 | Rafa Nadal     | DEPT100 |  86000 |
+|    800 | Carlos Alcaraz | DEPT100 |  98000 |
+|    900 | Tracy Martinez | DEPT300 |   NULL |
++--------+----------------+---------+--------+
+6 rows in set (0.000 sec)
+
+mysql> DELETE FROM employees WHERE emp_id = 200;
+Query OK, 1 row affected (0.001 sec)
+
+mysql> select * from employees;
++--------+----------------+---------+--------+
+| emp_id | emp_name       | dept_id | salary |
++--------+----------------+---------+--------+
+|    300 | Jane Austin    | DEPT300 |  68000 |
+|    400 | Bob Federer    | DEPT700 |  76000 |
+|    700 | Rafa Nadal     | DEPT100 |  86000 |
+|    800 | Carlos Alcaraz | DEPT100 |  98000 |
+|    900 | Tracy Martinez | DEPT300 |   NULL |
++--------+----------------+---------+--------+
+5 rows in set (0.000 sec)
+
+mysql> DELETE FROM employees;
+Query OK, 5 rows affected (0.001 sec)
+
+mysql> select * from employees;
+Empty set (0.000 sec)
+
+```
 -----
 
 ## Chapter 4: Practice Commands
