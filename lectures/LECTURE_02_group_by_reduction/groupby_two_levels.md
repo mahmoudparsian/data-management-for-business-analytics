@@ -45,6 +45,7 @@ INSERT INTO sales VALUES
 👉 Compute total sales per **region + product**.
 
 ```sql
+-- Q1: Common Table Expression example
 WITH RegionProductSales AS (
   SELECT region, product, SUM(amount) AS total_sales
   FROM sales
@@ -52,6 +53,15 @@ WITH RegionProductSales AS (
 )
 SELECT * FROM RegionProductSales;
 ```
+
+```sql
+-- Q2
+SELECT region, product, SUM(amount) AS total_sales
+FROM sales
+GROUP BY region, product;
+
+```
+
 
 ✅ Output
 

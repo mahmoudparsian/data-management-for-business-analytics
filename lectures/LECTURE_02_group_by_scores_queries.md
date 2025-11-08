@@ -314,6 +314,28 @@ output:
 3 rows in set (0.001 sec)
 ```
 
+**7.1 Find the highest score recorded per country and make sure the highest score is more than 80.**
+
+```sql
+SELECT country, 
+       MAX(score) AS max_score
+FROM scores
+GROUP BY country
+HAVING max_score > 80;
+```
+
+output:
+
+```
++---------+-----------+
+| country | max_score |
++---------+-----------+
+| CANADA  |        90 |
++---------+-----------+
+1 row in set (0.001 sec)
+```
+
+
 **8. Find the lowest score recorded per team**
 
 ```sql

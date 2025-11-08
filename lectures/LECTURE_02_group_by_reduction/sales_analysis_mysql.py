@@ -9,12 +9,13 @@ import mysql.connector
 conn = mysql.connector.connect(
     host="localhost",      # change if needed
     user="root",           # your MySQL username
-    password="yourpassword",  # your MySQL password
-    database="testdb"      # your database name
+    password="mp22pass",   # your MySQL password
+    database="world"      # your database name
 )
 
 query = "SELECT * FROM sales"
 df = pd.read_sql(query, conn)
+print("df=\n", df)
 conn.close()
 
 # --------------------------
