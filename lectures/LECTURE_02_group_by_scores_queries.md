@@ -454,6 +454,27 @@ output:
 3 rows in set (0.000 sec)
 ```
 
+**12.1 Count how many scores are greater than 50 per country and make sure the number of scores are greater than 2 (per country).**
+
+```sql
+SELECT country, COUNT(*) AS scores_above_50
+FROM scores
+WHERE score > 50
+GROUP BY country
+HAVING scores_above_50 > 2;
+```
+
+output:
+
+```
++---------+-----------------+
+| country | scores_above_50 |
++---------+-----------------+
+| CANADA  |               3 |
++---------+-----------------+
+1 row in set (0.001 sec)
+```
+
 
 **13. Find the country with the maximum average score**
 
