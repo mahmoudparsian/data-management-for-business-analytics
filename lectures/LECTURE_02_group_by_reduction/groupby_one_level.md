@@ -43,10 +43,65 @@ INSERT INTO sales VALUES
 ### Q1. Find total quantity sold per region.
 
 ```sql
+-- Q1
 SELECT region, 
        SUM(quantity) AS total_quantity
 FROM sales
 GROUP BY region;
+```
+
+```sql
+--Q2
+WITH grouped_table AS
+(
+    SELECT region, 
+           SUM(quantity) AS total_quantity
+    FROM sales
+    GROUP BY region
+)
+SELECT region, total_quantity 
+FROM grouped_table
+WHERE total_quantity > 15;
+
+-- Q3
+SELECT region, 
+       SUM(quantity) AS total_quantity
+FROM sales
+GROUP BY region
+HAVING total_quantity > 15;
+```
+
+More Examples:
+
+```sql
+select region, 
+       sum(quantity) as sum_qty 
+from sales 
+WHERE price < 1200 
+GROUP BY region;
++--------+---------+
+| region | sum_qty |
++--------+---------+
+| East   |       8 |
+| West   |      21 |
+| North  |      16 |
++--------+---------+
+3 rows in set (0.001 sec)
+
+-- filter result of GROUP BY by using HAVING
+select region, 
+       sum(quantity) as sum_qty 
+from sales 
+WHERE price < 1200 
+GROUP BY region 
+HAVING sum_qty > 15;
++--------+---------+
+| region | sum_qty |
++--------+---------+
+| West   |      21 |
+| North  |      16 |
++--------+---------+
+2 rows in set (0.001 sec)
 ```
 
 ### Q2. Find average price per product.
