@@ -609,6 +609,7 @@ output:
 ```
 
 
+
 **2. Find the top 2 scores per country**
 
 ```sql
