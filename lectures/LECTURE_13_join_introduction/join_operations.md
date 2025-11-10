@@ -269,7 +269,7 @@ NULL    NULL              Legal          NULL
 
 ### ✅ **Step 1: Define the Tables**
 
-#### **`customers` Table** (3 rows)
+### **`customers` Table** (3 rows)
 
 | customer\_id | name  |
 | ------------ | ----- |
@@ -277,7 +277,7 @@ NULL    NULL              Legal          NULL
 | 2            | Bob   |
 | 3            | Carol |
 
-#### **`products` Table** (4 rows)
+### **`sales` Table** (4 rows)
 
 | product\_id | customer\_id | product\_name |
 | ----------- | ------------ | ------------- |
@@ -304,11 +304,11 @@ Returns rows where there is a match in **both** tables.
 SELECT 
     customers.customer_id,
     customers.name,
-    products.product_name
+    sales.product_name
 FROM 
     customers
 INNER JOIN 
-    products ON customers.customer_id = products.customer_id;
+    products ON customers.customer_id = sales.customer_id;
 ```
 
 #### ✅ Result:
@@ -321,7 +321,7 @@ INNER JOIN
 
 Explanation:
 
-* Only customers **with matching products** are shown.
+* Only customers **with matching sales** are shown.
 * Carol (ID 3) is excluded.
 * Keyboard (customer\_id = 4) is excluded because that customer doesn’t exist.
 
@@ -335,11 +335,11 @@ Returns **all customers**, even if they haven't bought anything.
 SELECT 
     customers.customer_id,
     customers.name,
-    products.product_name
+    sales.product_name
 FROM 
     customers
 LEFT JOIN 
-    products ON customers.customer_id = products.customer_id;
+    products ON customers.customer_id = sales.customer_id;
 ```
 
 #### ✅ Result:
@@ -367,11 +367,11 @@ Returns **all products**, even if they don't belong to a customer.
 SELECT 
     customers.customer_id,
     customers.name,
-    products.product_name
+    sales.product_name
 FROM 
     customers
 RIGHT JOIN 
-    products ON customers.customer_id = products.customer_id;
+    products ON customers.customer_id = sales.customer_id;
 ```
 
 #### ✅ Result:
@@ -396,22 +396,22 @@ Explanation:
 SELECT 
     customers.customer_id,
     customers.name,
-    products.product_name
+    sales.product_name
 FROM 
     customers
 LEFT JOIN 
-    products ON customers.customer_id = products.customer_id
+    products ON customers.customer_id = sales.customer_id
 
 UNION
 
 SELECT 
     customers.customer_id,
     customers.name,
-    products.product_name
+    sales.product_name
 FROM 
     customers
 RIGHT JOIN 
-    products ON customers.customer_id = products.customer_id;
+    products ON customers.customer_id = sales.customer_id;
 ```
 
 #### ✅ Result:
@@ -438,11 +438,11 @@ Returns every possible combination (Cartesian product).
 ```sql
 SELECT 
     customers.name,
-    products.product_name
+    sales.product_name
 FROM 
     customers
 CROSS JOIN 
-    products;
+    sales;
 ```
 
 #### ✅ Result: (3 customers × 4 products = 12 rows)
