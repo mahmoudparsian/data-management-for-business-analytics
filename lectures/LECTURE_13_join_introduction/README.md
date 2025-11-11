@@ -72,6 +72,7 @@ department_id is FK to
 
 ![](./JOIN_INNER.png)
 
+```sql
 CREATE TABLE A (
    the_key INT, 
    value1 CHAR(1)
@@ -107,8 +108,11 @@ mysql> desc B;
 | value2  | char(1) | YES  |     | NULL    |       |
 +---------+---------+------+-----+---------+-------+
 2 rows in set (0.002 sec)
+```
 
+### Populate Tables A and B
 
+```sql
 INSERT INTO A(the_key, value1)
 VALUES
 (1, 'a'),
@@ -168,7 +172,11 @@ mysql> select * from B;
     3   z       2     m
     5   g       6     k
     5   r       8     a
-    
+```
+
+### INNER JOIN
+
+```sql   
 	SELECT A.the_key,
 	       A.value1,
 	       B.the_key,
@@ -205,7 +213,7 @@ mysql> select * from B;
     2  d   2  e
     2  d   2  f
     2  d   2  m
-    
+```   
     
 ------
        
@@ -217,6 +225,8 @@ mysql> select * from B;
 	for the right table's columns.
 
 ![](./JOIN_LEFT.png)
+
+```sql
 
     Table A     Table B
     ----------  ------------
@@ -272,6 +282,7 @@ mysql> select * from B;
 |       5 | r      |    NULL | NULL   |
 +---------+--------+---------+--------+
 13 rows in set (0.000 sec)
+```
 ------
 	
 ## RIGHT JOIN (or RIGHT OUTER JOIN): 
@@ -282,6 +293,8 @@ mysql> select * from B;
 	for the left table's columns.
 
 ![](./JOIN_RIGHT.png)
+
+```sql
 
     Table A     Table B
     ----------  ------------
@@ -335,7 +348,7 @@ mysql> select * from B;
 |    NULL | NULL   |       8 | a      |
 +---------+--------+---------+--------+
 12 rows in set (0.001 sec)   
-
+```
 
 ------
 
