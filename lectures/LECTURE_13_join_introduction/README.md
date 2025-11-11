@@ -21,6 +21,23 @@
 
 * FULL OUTER JOIN (all rows from both)
 
+## Key concepts
+
+	1. Related Columns: 
+	
+		Joins require a common column between 
+		tables, such as a primary key (PK) in 
+		one table and a foreign key  (FK)  in 
+		another, to establish a logical connection.
+		
+	2. Join Condition: 
+	
+		This is the rule that determines how rows 
+		are matched, usually an equality test in 
+		the ON clause. The column names don't have 
+		to be the same, but their data types must 
+		be compatible.
+
 
 ## INNER JOIN: 
 
