@@ -138,12 +138,20 @@ emp_id    emp_name    dept_id
 
 ## Cross Join of Employees and Departments Tables
 
+```
+Table A: 100
+Table B: 400
+Cross Join(A, B) = {(x, y) / (x in A) AND (y in B)}
+output: 100 x 400 = 40,000 rows
+
+Cross Join = Cartesian Product of 2 tables
+
 ```sql
 SELECT e.emp_id, 
        e.emp_name, 
        e.dept_id AS e_dept_id,
        d.dept_id AS d_dept_id,
-       dept_name
+       d.dept_name
 FROM employees e,
      departments d;
      
@@ -206,7 +214,9 @@ Show employees that are assigned to departments.
 
 ~~~sql
 SELECT 
-       e.emp_name, 
+       e.emp_name,
+       e.dept_id AS e_dept_id,
+       d.dept_id AS d_dept_id, 
        d.dept_name
 FROM 
        Employees e
@@ -226,6 +236,17 @@ Output
 | Charlie  | Engineering |
 +----------+-------------+
 5 rows in set (0.001 sec)
+
++----------+-----------+-----------+-------------+
+| emp_name | e_dept_id | d_dept_id | dept_name   |
++----------+-----------+-----------+-------------+
+| Alice    |         1 |         1 | HR          |
+| David    |         1 |         1 | HR          |
+| Bob      |         2 |         2 | Finance     |
+| Eve      |         2 |         2 | Finance     |
+| Charlie  |         3 |         3 | Engineering |
++----------+-----------+-----------+-------------+
+5 rows in set (0.000 sec)
 ~~~
 
 ⸻
@@ -260,6 +281,36 @@ Output
 +----------+-------------+
 8 rows in set (0.001 sec)
 
+
+~~~sql
+SELECT 
+       e.emp_name,
+       e.dept_id AS e_dept_id,
+       d.dept_id AS d_dept_id, 
+       d.dept_name
+FROM 
+       Employees e
+LEFT JOIN Departments d ON e.dept_id = d.dept_id;
+~~~
+
+Output
+
+~~~
++----------+-----------+-----------+-------------+
+| emp_name | e_dept_id | d_dept_id | dept_name   |
++----------+-----------+-----------+-------------+
+| Alice    |         1 |         1 | HR          |
+| Bob      |         2 |         2 | Finance     |
+| Charlie  |         3 |         3 | Engineering |
+| David    |         1 |         1 | HR          |
+| Eve      |         2 |         2 | Finance     |
+| Frank    |      NULL |      NULL | NULL        |
+| Grace    |      NULL |      NULL | NULL        |
+| Heidi    |      NULL |      NULL | NULL        |
++----------+-----------+-----------+-------------+
+8 rows in set (0.000 sec)
+
+
 ~~~
 
 ⸻
@@ -291,6 +342,30 @@ Output
 | NULL     | Marketing   |
 | NULL     | Legal       |
 +----------+-------------+
+7 rows in set (0.001 sec)
+
+
+
+SELECT 
+       e.emp_name, 
+       e.dept_id AS e_dept_id,
+       d.dept_id AS d_dept_id, 
+       d.dept_name
+FROM 
+       Employees e
+RIGHT JOIN Departments d ON e.dept_id = d.dept_id;
+
++----------+-----------+-----------+-------------+
+| emp_name | e_dept_id | d_dept_id | dept_name   |
++----------+-----------+-----------+-------------+
+| Alice    |         1 |         1 | HR          |
+| David    |         1 |         1 | HR          |
+| Bob      |         2 |         2 | Finance     |
+| Eve      |         2 |         2 | Finance     |
+| Charlie  |         3 |         3 | Engineering |
+| NULL     |      NULL |         4 | Marketing   |
+| NULL     |      NULL |         5 | Legal       |
++----------+-----------+-----------+-------------+
 7 rows in set (0.001 sec)
 ~~~
 
@@ -376,14 +451,33 @@ Explanation:
 |       5 | Legal     |
 +---------+-----------+
 2 rows in set (0.001 sec)
+
+-- We want departments that have no employees assigned.
+SELECT d.dept_id, 
+       d.dept_name,
+       e.emp_id,
+       e.dept_id As e_dept_id
+FROM Departments d
+LEFT JOIN Employees e ON d.dept_id = e.dept_id
+WHERE e.emp_id IS NULL;
+
++---------+-----------+--------+-----------+
+| dept_id | dept_name | emp_id | e_dept_id |
++---------+-----------+--------+-----------+
+|       4 | Marketing |   NULL |      NULL |
+|       5 | Legal     |   NULL |      NULL |
++---------+-----------+--------+-----------+
+2 rows in set (0.000 sec)
+
 ~~~
 
 **Solution 2: Using NOT IN**
 
 ~~~sql
+-- We want departments that have no employees assigned.
 SELECT dept_id, dept_name
 FROM Departments
-WHERE dept_id NOT IN (
+WHERE dept_id NOT IN ( -- creates {1, 2, 3}
                        SELECT DISTINCT dept_id 
                        FROM Employees 
                        WHERE dept_id IS NOT NULL
