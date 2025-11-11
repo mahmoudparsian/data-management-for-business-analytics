@@ -50,13 +50,21 @@
 	         FROM orders o
 	         INNER JOIN customers c 
 	              ON o.customer_id = c.customer_id;
-	         
+
+![](./JOIN_INNER.png)
+
+------
+       
 ## LEFT JOIN (or LEFT OUTER JOIN): 
 
 	Returns all rows from the left table, 
 	and the matched rows from the right table. 
 	If there is no match, the result is NULL 
 	for the right table's columns.
+
+![](./JOIN_LEFT.png)
+
+------
 	
 ## RIGHT JOIN (or RIGHT OUTER JOIN): 
 
@@ -65,6 +73,10 @@
 	If there is no match, the result is NULL 
 	for the left table's columns.
 
+![](./JOIN_RIGHT.png)
+
+------
+
 ## FULL OUTER JOIN: 
 
 	Returns all rows when there is a match 
@@ -72,12 +84,20 @@
 	returns NULL for columns of the table 
 	that doesn't have a match.
 
+![](./JOIN_FULL.png)
+
+------
+
 ## CROSS JOIN: 
 
 	Returns the Cartesian product of both 
 	tables, combining every row from the 
 	first table with every row from the 
 	second table. 
+
+![](./JOIN_CROSS.webp)
+
+------
 
 
 ## References
