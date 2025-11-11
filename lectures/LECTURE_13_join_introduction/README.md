@@ -8,8 +8,8 @@
 	   FROM table1 
 	   JOIN table2 ON table1.column = table2.column;
 	
-	where column is a common attribute in 
-	both table1 and table2.
+	where column is a common attribute 
+	in both table1 and table2.
 	
 ## Common Join types include 
 

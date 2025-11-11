@@ -1,3 +1,31 @@
+# Join Operations
+
+## Inner Join
+![](join_type_inner_join.png)
+![](INNER_JOIN.png)
+
+-----
+
+## Left Join
+![](join_type_left_join.png)
+![](LEFT_JOIN.png)
+
+-----
+
+## Right Join
+![](join_type_right_join.png)
+![](RIGHT_JOIN.png)
+
+-----
+
+## Full Join
+![](join_type_cross_join.png)
+![](FULL_JOIN.png)
+
+-----
+
+
+
 # SQL Joins Tutorials
 
 [1. SQL Joins with Examples](https://stevestedman.com/consulting/training-classes/inner-join-vs-outer-join/sql-joins-with-examples-pdf)
