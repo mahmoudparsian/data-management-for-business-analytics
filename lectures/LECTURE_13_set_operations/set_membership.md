@@ -54,11 +54,23 @@ id   name     department
 
 #### 👉 Find employees who work in IT or HR.
 
+solution-1:
+
 ~~~sql
 SELECT name, department
 FROM employees
 WHERE department IN ('IT', 'HR');
 ~~~
+
+solution-2:
+
+~~~sql
+SELECT name, department
+FROM employees
+WHERE (department = 'IT') OR
+      (department = 'HR');
+~~~
+
 
 ✅ Output:
 
