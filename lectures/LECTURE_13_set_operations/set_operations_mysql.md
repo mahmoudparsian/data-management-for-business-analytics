@@ -167,9 +167,11 @@ id    name
 
 ~~~sql
 SELECT id, name FROM tableA
-WHERE (id, name) NOT IN (
-    SELECT id, name FROM tableB
-);
+WHERE (id, name) NOT IN 
+   (
+     SELECT id, name 
+     FROM tableB
+   );
 ~~~
 
 ✅ Output
@@ -179,5 +181,37 @@ id    name
 1     Alice
 ~~~
 
+
+## Step 8: EXCEPT (rows in B but not in A)
+
+~~~sql
+SELECT id, name FROM tableB
+EXCEPT
+SELECT id, name FROM tableA;
+~~~
+
+✅ Output
+
+```
+id    name
+1     Alice
+```
+
+## Step 7: EXCEPT: another method
+
+~~~sql
+SELECT id, name FROM tableB
+WHERE (id, name) NOT IN 
+   (
+     SELECT id, name 
+     FROM tableA
+   );
+~~~
+
+✅ Output
+
+```
+(4, 'David')
+```
 ⸻
 
