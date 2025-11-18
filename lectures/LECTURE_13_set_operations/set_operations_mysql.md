@@ -197,7 +197,7 @@ id    name
 1     Alice
 ```
 
-## Step 7: EXCEPT: another method
+## Step 9: EXCEPT: another method
 
 ~~~sql
 SELECT id, name FROM tableB
