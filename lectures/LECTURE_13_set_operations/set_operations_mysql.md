@@ -1,9 +1,11 @@
 # SET Operations (using MySQL)
 
-	Let's teach MySQL's union, union all, intersect 
-	and except set operations. create 2 simple table 
-	each having 3 rows and then demo these set operations 
-	with sql and  output
+	1. Let's teach MySQL's union, union all, 
+	   intersect and except set operations. 
+	
+	1. create 2 simple table each having 3 rows 
+	   and then demo these set operations 
+	   with sql and  output
 
 
 📝 Teaching Notes
@@ -156,8 +158,10 @@ SELECT id, name FROM tableB;
 
 ✅ Output
 
+```
 id    name
 1     Alice
+```
 
 ## Step 7: EXCEPT: another method
 
