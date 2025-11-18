@@ -29,26 +29,63 @@
 
 ⸻
 
-### `2. Intersection ( ∩ )`
+### 2. `Union_All ( ∪ )`
 
-    •    Definition: The intersection of two sets A and B is 
-         the set of elements that are in both A and B.
+    •    Definition: The UNION_ALL of two sets A and B is the 
+         set of elements that are in A, or in B, or in both
+         (DUPLICATES ARE ALLOWED)
+         
+    •    Symbol: A ∪ B
+    
+    •    Example:
+
+			
+			A = {1, 2, 3}
+
+			B = {3, 4, 5}
+
+			UNION_ALL (A, B)  = {1, 2, 3, 3, 4, 5}
+
+### 3. Example
+
+```
+Example: 
+
+A = {1, 2, 2, 3}
+
+B = {2, 3, 3, 4}
+
+UNION ALL (A, B) = { 1, 2, 2, 3, 2, 3, 3, 4 }
+
+UNION (A, B) = { 1, 2, 3, 4 } 
+
+```
+
+⸻
+
+
+### `4. Intersection ( ∩ )`
+
+    •    Definition: 
+              The intersection of two sets A and B 
+              is the set of elements that are in 
+              both A and B.
          
     •    Symbol: A ∩ B
     
     •    Example:
 
-			A = {1, 2, 3}
+			A = { 1, 2, 3, 4 }
 
-			B = {3, 4, 5}
+			B = { 3, 4, 5, 6 }
 
-			A ∩ B = {3}
+			A ∩ B = { 3, 4 }
 
 
 
 ⸻
 
-### 3. Difference ( a.k.a. Except )
+### 5. Difference ( a.k.a. Except )
 
     •    Definition: The difference of two sets A – B 
          (also called A except B) is the set of elements 
@@ -60,6 +97,7 @@
 
 			A = {1, 2, 3}
 			B = {3, 4, 5}
+			
 			A – B = {1, 2}
 			B – A = {4, 5}
 
