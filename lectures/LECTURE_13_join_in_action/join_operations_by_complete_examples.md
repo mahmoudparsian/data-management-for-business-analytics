@@ -79,10 +79,22 @@ FROM t2;
 
 ## INNER-JOIN
 
-
+	1. The purpose of an INNER JOIN is to 
+	   combine rows from two or more tables 
+	   and return only the rows where the 
+	   join condition is met in both tables.
+	
+	2. The INNER JOIN keyword selects records 
+	   that have matching values in both tables.
+	
+	
 ![](./images/inner_join_1.jpeg)
 
 ![](./images/inner_join_2.png)
+
+![](./images/inner-join-example-sql.png)
+
+
 
 ![](./images/JOIN_INNER.png)
 
@@ -158,6 +170,32 @@ INNER JOIN t2
 
 ## LEFT-JOIN
 
+	1. The business purpose of a LEFT JOIN is 
+	   to retrieve all records from a "left" 
+	   table while also including matching 
+	   records from a "right" table. 
+	
+	2. This is crucial for scenarios where you 
+	   need to ensure no data is lost from the 
+	   primary (left) table, such as 
+	   
+	   		* listing all customers with their 
+	   		  orders (including customers who 
+	   		  have placed no orders) 
+	   		
+	   		or 
+	   
+	       * showing all departments with their 
+	         employees (including departments 
+	         with no employees). 
+
+-----
+   
+#### how left-join works?
+
+![](./images/how-left-join-works.webp)
+
+-----
 
 ![](./images/JOIN_LEFT.png)
 
