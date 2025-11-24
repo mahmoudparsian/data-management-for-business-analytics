@@ -1,5 +1,85 @@
 # Rank functions in MySQL
 
+## Business Questions ?
+
+* What are top-5 products sold in each state in USA
+
+* What are top-10 Universities in the world
+
+* What are top-10 heart surgeons in California
+
+* Which beauty products did not sell well in New York
+
+* What are the top-3 tennis players per country
+
+* What are the top-10 products sold in Black Friday
+
+* What are the Bottom-10 products sold in Black Friday
+
+
+## Ranking functions answer these type of questions
+
+	SQL ranking functions serve the purpose 
+	of assigning a unique or non-unique rank 
+	to each row within a result set, or within 
+	specific partitions (groups) of a result set, 
+	based on a defined ordering criterion. 
+	
+	These functions are crucial for various data 
+	analysis and reporting tasks, allowing for the 
+	identification of top performers, the creation 
+	of leaderboards, or the categorization of data 
+	based on relative position.
+
+
+# Ranking Functions
+
+	1. RANK()
+	
+	2. DENSE_RANK()
+	
+	3. ROW_NUMBER()
+
+## 1. `RANK():`
+
+	Assigns a unique rank number to each distinct row 
+	within a partition. If two or more rows have the same 
+	value, they receive the same rank, but the next rank(s) 
+	will skip numbers.
+
+	For example, if two rows are tied for rank 1, the next 
+	rank will be 3 (1, 1, 3).
+
+## 2. `DENSE_RANK(): no gap`
+
+	Similar to RANK(), but it does not skip ranks when 
+	there are ties. If two rows have the same rank, 
+	the next rank will be consecutive.
+
+	For example, if two rows are tied for rank 1, 
+	the next rank will be 2 (1, 1, 2).
+
+## 3. `ROW_NUMBER():`
+
+	Assigns a unique sequential integer to rows 
+	within a partition. Unlike RANK() and DENSE_RANK(), 
+	it does not account for ties; each row gets a unique 
+	number regardless of duplicates.
+
+## Syntax Simplified
+
+	The syntax for using these functions is as follows:
+
+		RANK() OVER (PARTITION BY column ORDER BY column)
+		
+		DENSE_RANK() OVER (PARTITION BY column ORDER BY column)
+		
+		ROW_NUMBER() OVER (PARTITION BY column ORDER BY column)
+
+
+## Rank functions = Window functions
+
+
 	Rank functions in MySQL are window functions 
 	that allow you to assign a rank to each row 
 	within a partition of a result set. 
@@ -9,6 +89,7 @@
 	of rows, such as finding the highest or lowest 
 	values, and they can help you easily categorize 
 	data without needing to create complex subqueries.
+
 
 ## Types of Rank Functions
 
@@ -143,6 +224,12 @@ output:
 	and reporting, allowing you to easily segment 
 	and rank your data based on various criteria.
 
-## Source:
 
-1. [Rank functions in MySQL](https://medium.com/@emad-mohamed/rank-functions-in-mysql-e76762c210a6)
+
+# References
+
+[1. What’s the difference? — RANK() vs.DENSE_RANK() vs.ROW_NUMBER()](https://medium.com/@LoriLu/whats-the-difference-rank-vs-dense-rank-vs-row-number-3aca5ecfb928)
+
+[2. MySQL RANK Function](https://www.mysqltutorial.org/mysql-window-functions/mysql-rank-function)
+
+[3. Rank functions in MySQL](https://medium.com/@emad-mohamed/rank-functions-in-mysql-e76762c210a6)
