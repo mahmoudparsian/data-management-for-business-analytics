@@ -142,6 +142,29 @@ WITH
 SELECT * FROM us_only;
 ```
 
+## What tables can be used in CTEs?
+
+```
+Lets say we have: employees, departments, projects
+
+WITH 
+CTE1 AS
+(
+   use employees, departments, projects
+)
+,
+CTE2 AS
+(
+ use employees, departments, projects & CTE1
+) 
+,
+CTE3 AS
+(
+  use employees, departments, projects & CTE1 & CTE2
+)
+SELECT 
+ < use employees, departments, projects & CTE1 & CTE2 & CTE3>
+```
 ---
 
 ## Slide 10 — Ranking with CTEs
