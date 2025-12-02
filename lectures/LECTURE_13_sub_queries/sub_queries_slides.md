@@ -106,6 +106,21 @@ JOIN avg_sal
 WHERE salary > avg_salary;
 ```
 
+
+```
+This subquery: what does it do:
+
+WITH avg_sal AS (
+    SELECT AVG(salary) AS avg_salary
+    FROM employees
+)
+=>
+
+Table as: avg_sal
+one column: avg_salary
+one row: <average-salary-of-all-employees>
+```
+
 ---
 
 ## Slide 8 — CTE with GROUP BY
