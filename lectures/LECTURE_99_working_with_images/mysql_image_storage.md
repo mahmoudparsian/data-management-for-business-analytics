@@ -2,6 +2,11 @@
 
 ## 1. Create a Simple Table
 
+		LONGBLOB is a data type in MySQL used to 
+		store Binary Large Objects (BLOBs) that 
+		can hold a large amount of binary data.
+	
+	
 ```sql
 CREATE TABLE images_table (
     id INT  PRIMARY KEY,
@@ -56,7 +61,9 @@ Place your image files inside the allowed directory.
 ## 3. Query Image Metadata
 
 ```sql
-SELECT id, name, LENGTH(image_data) AS bytes
+SELECT id, 
+       name, 
+       LENGTH(image_data) AS bytes
 FROM images_table;
 ```
 
