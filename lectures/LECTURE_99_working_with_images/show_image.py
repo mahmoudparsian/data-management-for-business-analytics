@@ -45,7 +45,7 @@ db_config = {
 	"user": "root",
 	"password": "mp22pass",
 	"host": "localhost",
-	"database": "testdb"
+	"database": "cat_images"
 }
 
 try:

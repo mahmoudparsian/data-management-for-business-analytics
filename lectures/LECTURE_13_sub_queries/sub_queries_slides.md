@@ -237,7 +237,10 @@ WITH dept_stats AS (
     FROM employees
     GROUP BY dept_id
 )
-SELECT * FROM dept_stats;
+SELECT * 
+FROM dept_stats
+WHERE avg_sal > 45000 AND
+      min_sal > 23000;
 ```
 
 ---
