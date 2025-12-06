@@ -246,10 +246,10 @@ GROUP BY dept_id;
 
 ```sql
 SELECT d.dept_name, 
-       AVG(salary) AS avg_salary
+       AVG(e.salary) AS avg_salary
 FROM employees e
-INNER JOIN departments USING(dept_id)
-GROUP BY dept_name;
+INNER JOIN departments d USING(dept_id)
+GROUP BY d.dept_name;
 ```
 
 
@@ -260,10 +260,10 @@ GROUP BY dept_name;
 #### Filter after creating aggregated result
 
 ```sql
-SELECT dept_id, 
-       AVG(salary) AS avg_salary
-FROM employees
-GROUP BY dept_id
+SELECT e.dept_id, 
+       AVG(e.salary) AS avg_salary
+FROM employees e
+GROUP BY e.dept_id
 HAVING avg_salary > 120000;
 ```
 
