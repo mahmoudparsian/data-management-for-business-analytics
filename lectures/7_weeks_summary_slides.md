@@ -215,6 +215,7 @@ departments(dept_id, dept_name)
 #### Find average salary per department ID:
 
 ```sql
+-- VALID
 SELECT dept_id, 
        AVG(salary) AS avg_salary
 FROM employees
@@ -231,7 +232,7 @@ GROUP BY dept_id;
 ```
 
 ```sql
--- NOT VALID
+-- VALID
 SELECT dept_id, 
        GROUP_CONCAT(age) AS list_of_ages,
        AVG(salary) AS avg_salary
