@@ -259,12 +259,30 @@ GROUP BY d.dept_name;
 
 #### Filter after creating aggregated result
 
+solution-1:
+
 ```sql
 SELECT e.dept_id, 
        AVG(e.salary) AS avg_salary
 FROM employees e
 GROUP BY e.dept_id
 HAVING avg_salary > 120000;
+```
+
+solution-2:
+
+```sql
+WITH grouped_salary AS
+(
+  SELECT e.dept_id, 
+         AVG(e.salary) AS avg_salary
+  FROM employees e
+  GROUP BY e.dept_id
+)
+SELECT dept_id, 
+       avg_salary
+FROM grouped_salary
+WHERE avg_salary > 120000;
 ```
 
 
