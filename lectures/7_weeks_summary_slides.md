@@ -221,6 +221,26 @@ FROM employees
 GROUP BY dept_id;
 ```
 
+```sql
+-- NOT VALID
+SELECT dept_id, 
+       age,
+       AVG(salary) AS avg_salary
+FROM employees
+GROUP BY dept_id;
+```
+
+```sql
+-- NOT VALID
+SELECT dept_id, 
+       GROUP_CONCAT(age) AS list_of_ages,
+       AVG(salary) AS avg_salary
+FROM employees
+GROUP BY dept_id;
+```
+
+
+
 #### Find average salary per department name:
 
 ```sql
