@@ -186,7 +186,7 @@ INNER JOIN orders o USING(customer_id)
 
 -- method 3
 SELECT c.name, o.order_date, o.amount
-FROM customers c
+FROM customers c,
      orders o 
 WHERE c.customer_id = o.customer_id;
 ```
