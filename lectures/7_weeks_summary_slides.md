@@ -137,6 +137,23 @@ CREATE TABLE orders (
 );
 ```
 
+To make sure that `orders.customer_id` is never going to be NULL:
+
+```sql
+CREATE TABLE customers (
+  customer_id INT PRIMARY KEY,
+  customer_name VARCHAR(80),
+  customer_email VARCHAR(64)
+);
+
+CREATE TABLE orders (
+  order_id INT PRIMARY KEY,
+  customer_id INT NOT NULL,   -- <-- IT CAN NOT BE NULL
+  FOREIGN KEY (customer_id)
+    REFERENCES customers(customer_id)
+);
+```
+
 
 ---
 
