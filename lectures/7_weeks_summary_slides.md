@@ -170,15 +170,25 @@ CREATE TABLE orders (
 ## Slide 11 — Inner Join Example
 
 ```sql
+-- method 1
 SELECT c.name, o.order_date, o.amount
 FROM customers c
 INNER JOIN orders o ON c.customer_id = o.customer_id;
 
 -- OR --
 
+-- method 2
 SELECT c.name, o.order_date, o.amount
 FROM customers c
 INNER JOIN orders o USING(customer_id)
+
+-- OR --
+
+-- method 3
+SELECT c.name, o.order_date, o.amount
+FROM customers c
+     orders o 
+WHERE c.customer_id = o.customer_id;
 ```
 
 
